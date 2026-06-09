@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebSearch",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1630235547004-48640091f9e5?fm=jpg&q=60&w=800&auto=format&fit=crop\" -o /tmp/crane_7BUncfhNhSI.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1583246820648-e06ee5e2c267?fm=jpg&q=60&w=800&auto=format&fit=crop\" -o /tmp/crane_O2g8HCgDN8o.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1642864258915-fa204759b23f?fm=jpg&q=60&w=800&auto=format&fit=crop\" -o /tmp/crane_GiQoWgtkNzQ.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1593113616591-8baf0374ad42?fm=jpg&q=60&w=800&auto=format&fit=crop\" -o /tmp/crane_MpnfxtVelc.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1727818899530-5a3bee908607?fm=jpg&q=60&w=800&auto=format&fit=crop\" -o /tmp/crane_BL7UfXtVkg0.jpg)",
+      "Bash(curl -sL \"https://plus.unsplash.com/premium_photo-1673278860383-3230262e3a3c?fm=jpg&q=60&w=800&auto=format&fit=crop\" -o /tmp/crane_CTpGrgtKGes.jpg)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1630235547004-48640091f9e5?fm=jpg&q=80&w=2000&auto=format&fit=crop\" -o /tmp/crane_7BUncfhNhSI_large.jpg)"
+    ]
+  }
+}
