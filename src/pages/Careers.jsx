@@ -23,7 +23,7 @@ const openings = [
     location: 'Kempton Park, Gauteng',
     type: 'Full-time',
     department: 'Parts',
-    desc: 'Source and supply genuine and aftermarket parts for Sany, Shantui, and Komatsu equipment ranges.',
+    desc: 'Source and supply genuine and aftermarket parts for Caterpillar, Komatsu, and Volvo equipment ranges.',
   },
 ];
 
@@ -113,12 +113,12 @@ export default function Careers() {
                     <h3 className="uppercase leading-[0.95] mb-3" style={{ fontFamily: 'var(--font-display)', color: 'var(--chrome-light)', fontSize: '22px' }}>
                       {job.title}
                     </h3>
-                    <p className="text-[13px] leading-relaxed mb-4 font-light" style={{ color: 'var(--text-muted)' }}>{job.desc}</p>
+                    <p className="text-[15px] leading-relaxed mb-4 font-light" style={{ color: 'var(--text-muted)' }}>{job.desc}</p>
                     <div className="flex flex-wrap gap-4">
-                      <span className="flex items-center gap-1.5 text-[11px] font-light" style={{ color: 'var(--text-dim)' }}>
+                      <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-dim)' }}>
                         <MapPin size={11} strokeWidth={1.5} /> {job.location}
                       </span>
-                      <span className="flex items-center gap-1.5 text-[11px] font-light" style={{ color: 'var(--text-dim)' }}>
+                      <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-dim)' }}>
                         <Briefcase size={11} strokeWidth={1.5} /> {job.type}
                       </span>
                     </div>
@@ -141,12 +141,12 @@ export default function Careers() {
             <h4 className="uppercase leading-[0.95] mb-2" style={{ fontFamily: 'var(--font-display)', color: 'var(--chrome-light)', fontSize: '22px' }}>
               Don't See a Fit?
             </h4>
-            <p className="text-[13px] mb-5 font-light" style={{ color: 'var(--text-muted)' }}>
+            <p className="text-[15px] mb-5 font-light" style={{ color: 'var(--text-muted)' }}>
               Send your CV to us anyway. We're always interested in hearing from talented professionals.
             </p>
             <a
               href="mailto:bradleyh@bmhtradinginternational.com"
-              className="inline-flex items-center gap-2 px-6 py-3 text-[10px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 text-[12px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
               style={{ fontFamily: 'var(--font-heading)', border: '1px solid rgba(200,216,232,0.15)', color: 'var(--text-muted)' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'rgba(200,216,232,0.06)';

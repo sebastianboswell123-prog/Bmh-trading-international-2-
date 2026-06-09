@@ -4,10 +4,10 @@ const Q    = '?auto=format&fit=crop&w=900&q=80';
 const IMG = {
   // ── Excavators ──
   cat_exc:   `${BASE}/photo-1503708928676-1cb796a0891e${Q}`,
-  kom_exc:   `${BASE}/photo-1580901369227-308f6f40bdeb${Q}`,
+  kom_exc:   `${BASE}/photo-1649807533255-bbc9c9fb7d77${Q}`,
   vol_exc:   `${BASE}/photo-1568678453977-a90de6812e7a${Q}`,
   hit_exc:   `${BASE}/photo-1719409391675-671023c5f807${Q}`,
-  lie_exc:   `${BASE}/photo-1673441786909-cdfc8fe2b61b${Q}`,
+  lie_exc:   `${BASE}/photo-1628645419184-26a1f2757340${Q}`,
   // ── FEL (Front End Loaders) ──
   kom_wl:    `${BASE}/photo-1629807473015-41699c4471b5${Q}`,
   vol_wl:    `${BASE}/photo-1704570128155-78f044e20824${Q}`,
@@ -18,16 +18,16 @@ const IMG = {
   kom_bull:  `${BASE}/photo-1627451945663-5c1daa80cb20${Q}`,
 
   // ── Mobile Cranes ──
-  lie_crane: `${BASE}/photo-1699187344291-0d8646258a4c${Q}`,
+  lie_crane: `${BASE}/photo-1727818899530-5a3bee908607${Q}`,
   grv_crane: `${BASE}/photo-1630235547004-48640091f9e5${Q}`,
-  tadano_tr: `${BASE}/photo-1583246820648-e06ee5e2c267${Q}`,
+  tadano_tr: `${BASE}/photo-1586458995526-09ce6839babe${Q}`,
 
   // ── Dumpers ──
-  cat_dump:  `${BASE}/photo-1756805974517-32723f478150${Q}`,
-  vol_dump:  `${BASE}/photo-1622645636770-11fbf0611463${Q}`,
+  cat_dump:  `${BASE}/photo-1709489662983-3674d790b224${Q}`,
+  vol_dump:  `${BASE}/photo-1629807472592-2649bfa09f9c${Q}`,
 
   // ── TLB ──
-  jd_tlb:    `${BASE}/photo-1752245027733-3772c446d7c0${Q}`,
+  jd_tlb:    `${BASE}/photo-1646881478375-2a40ff90b803${Q}`,
 
   // ── Forklifts ──
   fork_1:    `${BASE}/photo-1620388640785-892616248ec8${Q}`,

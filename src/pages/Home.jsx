@@ -30,7 +30,7 @@ const services = [
   {
     icon: Wrench,
     title: 'Parts Supply',
-    description: 'Genuine and aftermarket parts for Sany, Shantui, Komatsu, and Metso equipment. Fast delivery across Africa.',
+    description: 'Genuine and aftermarket parts for Caterpillar, Komatsu, Volvo, and Hitachi equipment. Fast delivery across Africa.',
     num: '02',
   },
   {
@@ -167,7 +167,7 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full py-24">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full py-12 sm:py-24">
           <div className="max-w-3xl">
             {/* Eyebrow */}
             <motion.div
@@ -178,7 +178,7 @@ export default function Home() {
             >
               <div className="w-12 h-[1px] shimmer-line" style={{ background: 'rgba(200,216,232,0.4)' }} />
               <span
-                className="text-[10px] font-medium tracking-[0.4em] uppercase"
+                className="text-[12px] font-medium tracking-[0.4em] uppercase"
                 style={{ fontFamily: 'var(--font-heading)', color: '#ffffff' }}
               >
                 BMH Trading International
@@ -190,19 +190,19 @@ export default function Home() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
-              className="uppercase leading-[0.92] mb-8"
+              className="uppercase leading-[0.92] mb-6 sm:mb-8"
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(44px, 7vw, 96px)',
+                fontSize: 'clamp(42px, 11vw, 128px)',
                 fontWeight: 400,
                 letterSpacing: '0.02em',
               }}
             >
-              <span style={{ color: 'var(--chrome-light)' }}>Quality Used</span>
+              <span style={{ color: '#ffffff' }}>Quality Used</span>
               <br />
-              <span style={{ color: 'var(--chrome)' }}>Equipment</span>
+              <span style={{ color: '#ffffff' }}>Equipment</span>
               <br />
-              <span style={{ color: 'var(--chrome)' }}>Supplied Worldwide</span>
+              <span style={{ color: '#ffffff' }}>Supplied Worldwide</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -210,11 +210,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35, ease: [0.23, 1, 0.32, 1] }}
-              className="text-[15px] max-w-lg leading-relaxed mb-12 font-light"
+              className="text-[15px] max-w-lg leading-relaxed mb-8 sm:mb-12 font-light"
               style={{ color: 'var(--text-muted)' }}
             >
               South Africa's trusted supplier of construction and mining equipment.
-              Sany, Shantui, Komatsu & Metso equipment backed by genuine parts and expert support.
+              Caterpillar, Komatsu, Volvo & Liebherr equipment backed by genuine parts and expert support.
             </motion.p>
 
             {/* CTA buttons */}
@@ -226,24 +226,23 @@ export default function Home() {
             >
               <Link
                 to="/plant"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-400"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-400"
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  background: 'rgba(200,216,232,0.08)',
-                  color: 'var(--chrome-light)',
-                  border: '1px solid rgba(200,216,232,0.2)',
+                  background: '#ffffff',
+                  color: '#080E1A',
+                  border: '1px solid #ffffff',
+                  boxShadow: '0 8px 30px rgba(255,255,255,0.25)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(200,216,232,0.14)';
-                  e.currentTarget.style.borderColor = 'rgba(200,216,232,0.35)';
+                  e.currentTarget.style.background = '#ffffff';
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)';
+                  e.currentTarget.style.boxShadow = '0 14px 44px rgba(255,255,255,0.4)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(200,216,232,0.08)';
-                  e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)';
+                  e.currentTarget.style.background = '#ffffff';
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(255,255,255,0.25)';
                 }}
               >
                 View Stock
@@ -251,7 +250,7 @@ export default function Home() {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-400"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-400"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   border: '1px solid rgba(255,255,255,0.35)',
@@ -279,7 +278,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-0"
+            className="mt-12 sm:mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-0"
           >
             {stats.map((stat, i) => (
               <div
@@ -294,7 +293,7 @@ export default function Home() {
                   {stat.value}
                 </div>
                 <div
-                  className="text-[10px] tracking-[0.3em] uppercase mt-1 font-medium"
+                  className="text-[12px] tracking-[0.3em] uppercase mt-1 font-medium"
                   style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                 >
                   {stat.label}
@@ -319,7 +318,7 @@ export default function Home() {
           <div className="flex items-center gap-4 justify-center mb-7">
             <div className="h-[1px] w-10 shrink-0" style={{ background: 'rgba(200,216,232,0.2)' }} />
             <span
-              className="text-[10px] font-semibold tracking-[0.4em] uppercase whitespace-nowrap"
+              className="text-[12px] font-semibold tracking-[0.4em] uppercase whitespace-nowrap"
               style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome)' }}
             >
               Authorized Dealer &amp; Supplier
@@ -381,7 +380,7 @@ export default function Home() {
               >
                 {/* Number */}
                 <div
-                  className="text-[11px] font-medium tracking-[0.3em] mb-6"
+                  className="text-[13px] font-medium tracking-[0.3em] mb-6"
                   style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)', opacity: 0.5 }}
                 >
                   {service.num}
@@ -399,7 +398,7 @@ export default function Home() {
                 >
                   {service.title}
                 </h3>
-                <p className="text-[13px] leading-relaxed font-light" style={{ color: 'var(--text-muted)' }}>
+                <p className="text-[15px] leading-relaxed font-light" style={{ color: 'var(--text-muted)' }}>
                   {service.description}
                 </p>
               </motion.div>
@@ -424,7 +423,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-[1px]" style={{ background: 'rgba(200,216,232,0.3)' }} />
                 <span
-                  className="text-[10px] font-medium tracking-[0.4em] uppercase"
+                  className="text-[12px] font-medium tracking-[0.4em] uppercase"
                   style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                 >
                   Ready to Get Started?
@@ -445,7 +444,7 @@ export default function Home() {
                 href="https://wa.me/27827800084"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-[13px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',
@@ -466,7 +465,7 @@ export default function Home() {
               </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-[11px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-[13px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   border: '1px solid rgba(200,216,232,0.15)',

@@ -13,7 +13,7 @@ export default function Plant() {
     <>
       <Helmet>
         <title>Used Heavy Machinery For Sale South Africa | Excavators, Loaders, Dozers | BMH Trading</title>
-        <meta name="description" content="Browse quality used construction & mining machines for sale in South Africa. Caterpillar, Komatsu, Volvo, Sany, Shantui & more. Kempton Park, Gauteng. Enquire today." />
+        <meta name="description" content="Browse quality used construction & mining machines for sale in South Africa. Caterpillar, Komatsu, Volvo, Hitachi, Liebherr & more. Kempton Park, Gauteng. Enquire today." />
         <meta property="og:title" content="Used Heavy Machinery For Sale South Africa | BMH Trading International" />
         <meta property="og:description" content="28+ used excavators, wheel loaders, bulldozers, cranes & more. Leading brands. Based in Kempton Park, SA." />
         <meta property="og:type" content="website" />
@@ -114,7 +114,7 @@ export default function Plant() {
               href="https://wa.me/27827800084"
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+              className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
               style={{
                 fontFamily: 'var(--font-heading)',
                 background: 'rgba(200,216,232,0.08)',

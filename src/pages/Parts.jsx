@@ -8,14 +8,14 @@ import { EMAILJS_CONFIG } from '../utils/emailService';
 
 const brands = [
   'Caterpillar', 'Komatsu', 'Volvo', 'Hitachi', 'Liebherr',
-  'Doosan', 'Bomag', 'Sany', 'Shantui', 'Hyundai', 'Tadano', 'Other',
+  'John Deere', 'Grove', 'Tadano', 'Toyota', 'Bobcat', 'JLG', 'Other',
 ];
 
 const supportedBrands = [
   { name: 'Caterpillar', parts: 'Engines, hydraulics, undercarriage, GET, filters' },
   { name: 'Komatsu', parts: 'Track components, hydraulic pumps, seals, buckets' },
-  { name: 'Sany', parts: 'Control valves, cylinders, slew rings, electrical' },
-  { name: 'Shantui', parts: 'Transmissions, final drives, blades, rollers' },
+  { name: 'Liebherr', parts: 'Travel motors, swing bearings, cylinders, filters' },
+  { name: 'John Deere', parts: 'Transmissions, final drives, loader pins, filters' },
   { name: 'Volvo', parts: 'Boom & arm pins, filters, AC components, tyres' },
   { name: 'Hitachi', parts: 'Pumps, motors, undercarriage, attachments' },
 ];
@@ -84,8 +84,8 @@ export default function Parts() {
   return (
     <>
       <Helmet>
-        <title>Genuine & Aftermarket Parts for Caterpillar, Komatsu, Sany, Shantui | BMH Trading South Africa</title>
-        <meta name="description" content="OEM and aftermarket spare parts for Caterpillar, Komatsu, Volvo, Sany, Shantui, Hitachi & more. Fast delivery across South Africa and Africa. Contact BMH Trading International, Kempton Park." />
+        <title>Genuine & Aftermarket Parts for Caterpillar, Komatsu, Volvo, Hitachi | BMH Trading South Africa</title>
+        <meta name="description" content="OEM and aftermarket spare parts for Caterpillar, Komatsu, Volvo, Hitachi, Liebherr & more. Fast delivery across South Africa and Africa. Contact BMH Trading International, Kempton Park." />
         <meta property="og:title" content="Heavy Equipment Parts South Africa | BMH Trading International" />
         <meta property="og:description" content="Genuine & aftermarket parts for leading brands. Fast delivery across South Africa. Enquire now." />
         <meta property="og:type" content="website" />
@@ -96,7 +96,7 @@ export default function Parts() {
         <meta property="og:image:alt" content="Heavy equipment spare parts — BMH Trading International South Africa" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Genuine & Aftermarket Parts South Africa | BMH Trading International" />
-        <meta name="twitter:description" content="OEM and aftermarket spare parts for Caterpillar, Komatsu, Sany, Shantui & more. Fast delivery across Africa." />
+        <meta name="twitter:description" content="OEM and aftermarket spare parts for Caterpillar, Komatsu, Volvo, Hitachi & more. Fast delivery across Africa." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1606811883055-0d24f05c8bcd?w=1200&h=630&fit=crop&q=80" />
         <link rel="canonical" href="https://www.bmhtradinginternational.com/parts" />
       </Helmet>
@@ -121,7 +121,7 @@ export default function Parts() {
       {/* Brands grid */}
       <section className="py-14 lg:py-20" style={{ background: 'var(--bg-alt)', borderBottom: '1px solid rgba(200,216,232,0.04)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
-          <p className="text-[10px] font-medium tracking-[0.3em] uppercase mb-8" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+          <p className="text-[12px] font-medium tracking-[0.3em] uppercase mb-8" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
             Brands We Support
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -140,10 +140,10 @@ export default function Parts() {
                 <div className="flex items-start gap-3">
                   <CheckCircle size={14} strokeWidth={1.5} style={{ color: 'var(--text-dim)', marginTop: 2, flexShrink: 0 }} />
                   <div>
-                    <h4 className="text-[12px] font-semibold tracking-[0.08em] uppercase mb-1" style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}>
+                    <h4 className="text-[14px] font-semibold tracking-[0.08em] uppercase mb-1" style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}>
                       {b.name}
                     </h4>
-                    <p className="text-[12px] font-light leading-relaxed" style={{ color: 'var(--text-muted)' }}>{b.parts}</p>
+                    <p className="text-[14px] font-light leading-relaxed" style={{ color: 'var(--text-muted)' }}>{b.parts}</p>
                   </div>
                 </div>
               </motion.div>
@@ -181,21 +181,21 @@ export default function Parts() {
                     'Pan-African delivery arranged',
                     'Quotes within 24 hours',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
+                    <li key={i} className="flex items-center gap-2.5 text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>
                       <CheckCircle size={13} strokeWidth={1.5} style={{ color: 'var(--text-dim)', flexShrink: 0 }} />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-8 pt-6" style={{ borderTop: '1px solid rgba(200,216,232,0.06)' }}>
-                  <p className="text-[11px] font-medium tracking-[0.15em] uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                  <p className="text-[13px] font-medium tracking-[0.15em] uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                     Prefer WhatsApp?
                   </p>
                   <a
                     href="https://wa.me/27827800084?text=Hi%2C%20I%20need%20a%20part%20for%20my%20machine.%20Can%20you%20help%3F"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 text-[10px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-5 py-3 text-[12px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
                     style={{
                       fontFamily: 'var(--font-heading)',
                       background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',
@@ -239,9 +239,9 @@ export default function Parts() {
                 >
                   <CheckCircle size={36} strokeWidth={1} className="mx-auto mb-4" style={{ color: '#6ee7a0' }} />
                   <p className="text-[15px] font-light mb-1" style={{ color: 'var(--chrome-light)' }}>Enquiry Received</p>
-                  <p className="text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>We'll get back to you within 24 hours.</p>
+                  <p className="text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>We'll get back to you within 24 hours.</p>
                   <button
-                    className="mt-6 text-[10px] tracking-[0.2em] uppercase font-medium transition-colors duration-300"
+                    className="mt-6 text-[12px] tracking-[0.2em] uppercase font-medium transition-colors duration-300"
                     style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                     onClick={() => setStatus('idle')}
                     onMouseEnter={(e) => e.currentTarget.style.color = 'var(--chrome-light)'}
@@ -275,7 +275,7 @@ export default function Parts() {
 
                   {/* Divider */}
                   <div className="pt-2 pb-1">
-                    <p className="text-[10px] font-medium tracking-[0.25em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                    <p className="text-[12px] font-medium tracking-[0.25em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                       Machine & Part Details
                     </p>
                   </div>
@@ -314,7 +314,7 @@ export default function Parts() {
                     <button
                       type="submit"
                       disabled={status === 'sending'}
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                       style={{
                         fontFamily: 'var(--font-heading)',
                         background: 'rgba(200,216,232,0.08)',
@@ -338,7 +338,7 @@ export default function Parts() {
                       {status === 'sending' ? 'Sending…' : 'Submit Enquiry'}
                     </button>
                     {status === 'error' && (
-                      <p className="text-[12px]" style={{ color: '#f87171' }}>
+                      <p className="text-[14px]" style={{ color: '#f87171' }}>
                         Failed to send. Please try WhatsApp or email directly.
                       </p>
                     )}

@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { Phone, CheckCircle, Send, CalendarDays, MapPin } from 'lucide-react';
+import { Phone, CheckCircle, Send, CalendarDays } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import { EMAILJS_CONFIG } from '../utils/emailService';
 
@@ -10,7 +10,7 @@ const rentalCategories = [
   {
     title: 'Excavators',
     range: '13 – 50 Ton',
-    brands: 'Sany, Komatsu',
+    brands: 'Caterpillar, Komatsu',
     features: ['GPS tracking included', 'Operator available on request', 'Full maintenance support'],
     image: 'https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=600&h=400&fit=crop',
   },
@@ -24,7 +24,7 @@ const rentalCategories = [
   {
     title: 'Dozers',
     range: 'D6 – D9 Class',
-    brands: 'Shantui',
+    brands: 'Komatsu',
     features: ['Ripper attachments available', 'Wet & dry hire options', 'Transport arranged'],
     image: 'https://images.unsplash.com/photo-1690719465490-db2864ef85c1?w=600&h=400&fit=crop',
   },
@@ -168,15 +168,15 @@ export default function Rentals() {
                   <h3 className="uppercase leading-[0.95] mb-1" style={{ fontFamily: 'var(--font-display)', color: 'var(--chrome-light)', fontSize: '24px' }}>
                     {cat.title}
                   </h3>
-                  <p className="text-[10px] tracking-[0.25em] uppercase mb-1 font-medium" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                  <p className="text-[12px] tracking-[0.25em] uppercase mb-1 font-medium" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                     {cat.range}
                   </p>
-                  <p className="text-[11px] mb-5 font-light" style={{ color: 'var(--text-dim)' }}>
+                  <p className="text-[13px] mb-5 font-light" style={{ color: 'var(--text-dim)' }}>
                     Brands: {cat.brands}
                   </p>
                   <ul className="space-y-2.5 mb-6">
                     {cat.features.map((f, j) => (
-                      <li key={j} className="flex items-center gap-2.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
+                      <li key={j} className="flex items-center gap-2.5 text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>
                         <CheckCircle size={13} strokeWidth={1.5} style={{ color: 'var(--whatsapp)', flexShrink: 0 }} />
                         {f}
                       </li>
@@ -184,7 +184,7 @@ export default function Rentals() {
                   </ul>
                   <a
                     href="#rental-quote"
-                    className="w-full flex items-center justify-center gap-2 py-3 text-[10px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+                    className="w-full flex items-center justify-center gap-2 py-3 text-[12px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
                     style={{ fontFamily: 'var(--font-heading)', border: '1px solid rgba(200,216,232,0.15)', color: 'var(--text-muted)' }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = 'rgba(200,216,232,0.06)';
@@ -236,21 +236,21 @@ export default function Rentals() {
                     'GPS tracking on all units',
                     'Nationwide delivery',
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
+                    <li key={i} className="flex items-center gap-2.5 text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>
                       <CheckCircle size={13} strokeWidth={1.5} style={{ color: 'var(--text-dim)', flexShrink: 0 }} />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-8 pt-6" style={{ borderTop: '1px solid rgba(200,216,232,0.06)' }}>
-                  <p className="text-[11px] font-medium tracking-[0.15em] uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                  <p className="text-[13px] font-medium tracking-[0.15em] uppercase mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                     Urgent Requirement?
                   </p>
                   <a
                     href="https://wa.me/27827800084?text=Hi%2C%20I%20need%20a%20rental%20quote%20for%20equipment.%20Can%20you%20help%3F"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 text-[10px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-5 py-3 text-[12px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
                     style={{
                       fontFamily: 'var(--font-heading)',
                       background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',
@@ -294,9 +294,9 @@ export default function Rentals() {
                 >
                   <CheckCircle size={36} strokeWidth={1} className="mx-auto mb-4" style={{ color: '#6ee7a0' }} />
                   <p className="text-[15px] font-light mb-1" style={{ color: 'var(--chrome-light)' }}>Quote Request Received</p>
-                  <p className="text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>We'll confirm availability and pricing within 24 hours.</p>
+                  <p className="text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>We'll confirm availability and pricing within 24 hours.</p>
                   <button
-                    className="mt-6 text-[10px] tracking-[0.2em] uppercase font-medium transition-colors duration-300"
+                    className="mt-6 text-[12px] tracking-[0.2em] uppercase font-medium transition-colors duration-300"
                     style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                     onClick={() => setStatus('idle')}
                     onMouseEnter={(e) => e.currentTarget.style.color = 'var(--chrome-light)'}
@@ -330,7 +330,7 @@ export default function Rentals() {
 
                   {/* Divider */}
                   <div className="pt-2 pb-1">
-                    <p className="text-[10px] font-medium tracking-[0.25em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                    <p className="text-[12px] font-medium tracking-[0.25em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                       Rental Requirements
                     </p>
                   </div>
@@ -388,7 +388,7 @@ export default function Rentals() {
                     <button
                       type="submit"
                       disabled={status === 'sending'}
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                       style={{
                         fontFamily: 'var(--font-heading)',
                         background: 'rgba(200,216,232,0.08)',
@@ -412,7 +412,7 @@ export default function Rentals() {
                       {status === 'sending' ? 'Sending…' : 'Request Quote'}
                     </button>
                     {status === 'error' && (
-                      <p className="text-[12px]" style={{ color: '#f87171' }}>
+                      <p className="text-[14px]" style={{ color: '#f87171' }}>
                         Failed to send. Please try WhatsApp or email directly.
                       </p>
                     )}

@@ -47,7 +47,7 @@ export default function EquipmentCard({ item, index = 0 }) {
         </div>
         {/* Year badge */}
         <div
-          className="absolute top-4 right-4 px-2.5 py-1 text-[10px] font-semibold tracking-wider backdrop-blur-sm"
+          className="absolute top-4 right-4 px-2.5 py-1 text-[12px] font-semibold tracking-wider backdrop-blur-sm"
           style={{
             fontFamily: 'var(--font-heading)',
             background: 'rgba(8,14,26,0.6)',
@@ -86,16 +86,16 @@ export default function EquipmentCard({ item, index = 0 }) {
 
         {/* Meta row */}
         <div className="flex flex-wrap items-center gap-3 mb-3">
-          <span className="flex items-center gap-1.5 text-[11px] font-light" style={{ color: 'var(--text-muted)' }}>
+          <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
             <Clock size={11} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />
             {item.hours} hrs
           </span>
-          <span className="flex items-center gap-1.5 text-[11px] font-light" style={{ color: 'var(--text-muted)' }}>
+          <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
             <Tag size={11} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />
             {item.category}
           </span>
           {item.location && (
-            <span className="flex items-center gap-1.5 text-[11px] font-light" style={{ color: 'var(--text-muted)' }}>
+            <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
               <MapPin size={11} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />
               {item.location}
             </span>
@@ -104,7 +104,7 @@ export default function EquipmentCard({ item, index = 0 }) {
 
         {/* Description */}
         {item.description && (
-          <p className="text-[13px] leading-relaxed line-clamp-2 font-light" style={{ color: 'var(--text-dim)' }}>
+          <p className="text-[15px] leading-relaxed line-clamp-2 font-light" style={{ color: 'var(--text-dim)' }}>
             {item.description}
           </p>
         )}
@@ -113,7 +113,7 @@ export default function EquipmentCard({ item, index = 0 }) {
         {item.specs && (
           <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
             {Object.entries(item.specs).slice(0, 2).map(([key, val]) => (
-              <span key={key} className="text-[10px] font-light" style={{ color: 'var(--text-dim)' }}>
+              <span key={key} className="text-[12px] font-light" style={{ color: 'var(--text-dim)' }}>
                 <span style={{ color: 'var(--text-muted)' }}>{key}:</span> {val}
               </span>
             ))}
@@ -126,7 +126,7 @@ export default function EquipmentCard({ item, index = 0 }) {
             href={`https://wa.me/27827800084?text=${encodeURIComponent(`Hi, I'm interested in the ${item.year} ${item.name}. Is it still available?`)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2.5 text-[10px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+            className="flex items-center justify-center gap-2 w-full py-2.5 text-[12px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
             style={{
               fontFamily: 'var(--font-heading)',
               background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',

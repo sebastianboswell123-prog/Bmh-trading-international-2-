@@ -32,6 +32,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Close the mobile menu whenever the route changes.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setOpen(false); }, [location]);
 
   useEffect(() => {
@@ -57,16 +59,16 @@ export default function Navbar() {
         >
           <div className="max-w-[1400px] mx-auto px-8 h-[34px] flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <span className="flex items-center gap-2 text-[11px] tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.38)', fontFamily: 'var(--font-body)' }}>
+              <span className="flex items-center gap-2 text-[13px] tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.38)', fontFamily: 'var(--font-body)' }}>
                 <MapPin size={10} strokeWidth={1.5} />
                 Kempton Park, South Africa
               </span>
-              <span className="flex items-center gap-2 text-[11px] tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.38)', fontFamily: 'var(--font-body)' }}>
+              <span className="flex items-center gap-2 text-[13px] tracking-[0.08em]" style={{ color: 'rgba(255,255,255,0.38)', fontFamily: 'var(--font-body)' }}>
                 <Phone size={10} strokeWidth={1.5} />
                 WhatsApp Available
               </span>
             </div>
-            <span className="text-[10px] tracking-[0.3em] uppercase" style={{ color: 'rgba(255,255,255,0.28)', fontFamily: 'var(--font-heading)', fontWeight: 500 }}>
+            <span className="text-[12px] tracking-[0.3em] uppercase" style={{ color: 'rgba(255,255,255,0.28)', fontFamily: 'var(--font-heading)', fontWeight: 500 }}>
               Quality Equipment Worldwide
             </span>
           </div>
@@ -82,14 +84,14 @@ export default function Navbar() {
             boxShadow: scrolled ? '0 8px 32px rgba(0,0,0,0.4)' : '0 2px 16px rgba(0,0,0,0.25)',
           }}
         >
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-8 h-[76px] lg:h-[88px] flex items-center justify-between relative">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-8 h-[88px] flex items-center justify-between relative">
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3.5 shrink-0 group">
               <img
                 src="/bmh-logo-hd.png"
                 alt="BMH Trading International"
-                className="h-14 lg:h-[72px] w-auto transition-all duration-300"
+                className="h-[68px] lg:h-[72px] w-auto transition-all duration-300"
                 style={{ filter: 'brightness(1.15) contrast(1.05) drop-shadow(0 2px 10px rgba(80,140,220,0.4))' }}
               />
               <div className="hidden sm:block leading-none">
@@ -100,7 +102,7 @@ export default function Navbar() {
                   BMH Trading
                 </div>
                 <div
-                  className="text-[10px] tracking-[0.38em] uppercase font-semibold mt-0.5"
+                  className="text-[12px] tracking-[0.38em] uppercase font-semibold mt-0.5"
                   style={{ fontFamily: 'var(--font-heading)', color: 'rgba(255,255,255,0.7)' }}
                 >
                   International
@@ -180,7 +182,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3 shrink-0">
               <Link
                 to="/contact"
-                className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[12px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
+                className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[14px] font-semibold tracking-[0.18em] uppercase transition-all duration-300"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   background: 'rgba(200,216,232,0.1)',
@@ -253,7 +255,7 @@ export default function Navbar() {
                   >
                     <Link
                       to={link.path}
-                      className="flex items-center justify-between py-4 text-[13px] font-medium tracking-[0.1em] uppercase transition-colors duration-200"
+                      className="flex items-center justify-between py-4 text-[15px] font-medium tracking-[0.1em] uppercase transition-colors duration-200"
                       style={{
                         fontFamily: 'var(--font-heading)',
                         color: active ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.45)',
@@ -274,7 +276,7 @@ export default function Navbar() {
                 href="https://wa.me/27827800084"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 flex items-center justify-center gap-2 py-3.5 text-sm font-semibold tracking-[0.15em] uppercase"
+                className="mt-8 flex items-center justify-center gap-2 py-3.5 text-base font-semibold tracking-[0.15em] uppercase"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',
@@ -289,7 +291,7 @@ export default function Navbar() {
               <div className="mt-auto pb-8">
                 <div className="h-px mb-6" style={{ background: `linear-gradient(90deg, transparent, ${C.borderHover}, transparent)` }} />
                 <img src="/bmh-logo-hd.png" alt="BMH" className="h-10 w-auto mb-3" style={{ opacity: 0.7 }} />
-                <p className="text-[11px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.28)', fontFamily: 'var(--font-body)' }}>
+                <p className="text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.28)', fontFamily: 'var(--font-body)' }}>
                   142 2nd Avenue, Bredell AH<br />
                   Kempton Park, South Africa
                 </p>

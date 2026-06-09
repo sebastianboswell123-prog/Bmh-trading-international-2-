@@ -5,17 +5,17 @@ import SectionHeading from '../components/SectionHeading';
 
 const articles = [
   {
-    title: 'New Shantui and Sany Parts Now Available',
+    title: 'Genuine Caterpillar and Komatsu Parts Now Available',
     date: 'May 2026',
     category: 'Parts',
-    excerpt: 'We have expanded our parts inventory with new genuine Shantui SD32W and Sany excavator components including transmissions, control valves, bucket teeth, and more.',
+    excerpt: 'We have expanded our parts inventory with new genuine Caterpillar and Komatsu excavator components including hydraulic pumps, undercarriage, bucket teeth, and more.',
     image: 'https://images.unsplash.com/photo-1606811883055-0d24f05c8bcd?w=600&h=400&fit=crop',
   },
   {
-    title: 'Fresh Stock: 2024 Shantui SD32W Dozer',
+    title: 'Fresh Stock: Komatsu D65PX-18 Dozer',
     date: 'April 2026',
     category: 'New Arrivals',
-    excerpt: 'Brand new Shantui SD32W dozer now available with full manufacturer warranty. Contact us for specifications and pricing.',
+    excerpt: 'Fully refurbished Komatsu D65PX-18 dozer now available — new track shoes, rollers and idlers, iMC-ready for GPS dozing. Contact us for specifications and pricing.',
     image: 'https://images.unsplash.com/photo-1621922688758-359fc864071e?w=600&h=400&fit=crop',
   },
   {
@@ -32,7 +32,7 @@ export default function News() {
     <>
       <Helmet>
         <title>News & Stock Arrivals | BMH Trading International South Africa</title>
-        <meta name="description" content="Latest news, new stock arrivals and company updates from BMH Trading International. New Shantui dozers, Sany parts and more. Kempton Park, South Africa." />
+        <meta name="description" content="Latest news, new stock arrivals and company updates from BMH Trading International. New Komatsu dozers, Caterpillar parts and more. Kempton Park, South Africa." />
         <meta property="og:title" content="News & Stock Arrivals | BMH Trading International" />
         <meta property="og:description" content="Stay updated with our latest stock arrivals, parts availability and company news from BMH Trading International." />
         <meta property="og:type" content="website" />
@@ -80,16 +80,16 @@ export default function News() {
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <Calendar size={11} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />
-                    <span className="text-[11px] font-light" style={{ color: 'var(--text-dim)' }}>{article.date}</span>
+                    <span className="text-[13px] font-light" style={{ color: 'var(--text-dim)' }}>{article.date}</span>
                   </div>
                   <h3 className="text-[15px] font-semibold tracking-wide uppercase leading-tight mb-3" style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}>
                     {article.title}
                   </h3>
-                  <p className="text-[13px] leading-relaxed line-clamp-3 font-light" style={{ color: 'var(--text-muted)' }}>
+                  <p className="text-[15px] leading-relaxed line-clamp-3 font-light" style={{ color: 'var(--text-muted)' }}>
                     {article.excerpt}
                   </p>
                   <div className="mt-4 pt-4 flex items-center gap-2" style={{ borderTop: '1px solid rgba(200,216,232,0.06)' }}>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 group-hover:text-[var(--chrome-light)]"
+                    <span className="text-[12px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 group-hover:text-[var(--chrome-light)]"
                       style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                       Read More
                     </span>

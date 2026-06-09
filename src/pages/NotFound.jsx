@@ -37,7 +37,7 @@ export default function NotFound() {
             <div className="flex items-center justify-center gap-3 mb-5">
               <div className="h-[1px] w-8" style={{ background: 'rgba(200,216,232,0.2)' }} />
               <span
-                className="text-[10px] font-medium tracking-[0.4em] uppercase"
+                className="text-[12px] font-medium tracking-[0.4em] uppercase"
                 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
               >
                 Page Not Found
@@ -62,7 +62,7 @@ export default function NotFound() {
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 to="/"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   background: 'rgba(200,216,232,0.08)',
@@ -85,7 +85,7 @@ export default function NotFound() {
               </Link>
               <Link
                 to="/plant"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
                 style={{
                   fontFamily: 'var(--font-heading)',
                   border: '1px solid rgba(200,216,232,0.12)',

@@ -7,7 +7,7 @@ export default function FilterBar({ categories, active, onSelect }) {
           <button
             key={cat}
             onClick={() => onSelect(cat)}
-            className="relative px-5 py-2.5 text-[10px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
+            className="relative px-5 py-2.5 text-[12px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
             style={{
               fontFamily: 'var(--font-heading)',
               background: isActive ? 'rgba(200,216,232,0.08)' : 'transparent',

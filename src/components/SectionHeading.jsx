@@ -15,7 +15,7 @@ export default function SectionHeading({ label, title, subtitle, align = 'left',
         <div className="flex items-center gap-3 mb-5">
           <div className="w-8 h-[1px] shimmer-line" style={{ background: 'var(--chrome)' }} />
           <span
-            className="text-[10px] font-medium tracking-[0.4em] uppercase"
+            className="text-[12px] font-medium tracking-[0.4em] uppercase"
             style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
           >
             {label}

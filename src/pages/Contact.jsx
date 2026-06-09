@@ -134,18 +134,18 @@ export default function Contact() {
                       <item.icon size={17} strokeWidth={1.3} />
                     </div>
                     <div>
-                      <h4 className="text-[13px] font-semibold tracking-[0.06em] uppercase mb-1" style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}>
+                      <h4 className="text-[15px] font-semibold tracking-[0.06em] uppercase mb-1" style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}>
                         {item.title}
                       </h4>
                       {item.lines.map((line, j) => (
-                        <p key={j} className="text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>{line}</p>
+                        <p key={j} className="text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>{line}</p>
                       ))}
                       {item.action && (
                         <a
                           href={item.action.href}
                           target={item.action.href.startsWith('http') ? '_blank' : undefined}
                           rel={item.action.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="inline-flex items-center gap-1.5 mt-2 text-[10px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-[var(--chrome-light)]"
+                          className="inline-flex items-center gap-1.5 mt-2 text-[12px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 hover:text-[var(--chrome-light)]"
                           style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                         >
                           {item.action.label}
@@ -207,7 +207,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   style={{
                     fontFamily: 'var(--font-heading)',
                     background: status === 'success' ? 'rgba(37,211,102,0.12)' : 'rgba(200,216,232,0.08)',
@@ -233,7 +233,7 @@ export default function Contact() {
                   {status === 'sending' ? 'Sending…' : status === 'success' ? 'Enquiry Sent!' : 'Send Enquiry'}
                 </button>
                 {status === 'error' && (
-                  <p className="text-[12px] mt-2" style={{ color: '#f87171' }}>
+                  <p className="text-[14px] mt-2" style={{ color: '#f87171' }}>
                     Something went wrong. Please try WhatsApp or email directly.
                   </p>
                 )}

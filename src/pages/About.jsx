@@ -83,7 +83,7 @@ export default function About() {
             <div className="flex items-center gap-3 mb-5">
               <div className="w-8 h-px" style={{ background: 'rgba(200,216,232,0.5)' }} />
               <span
-                className="text-[10px] font-medium tracking-[0.4em] uppercase"
+                className="text-[12px] font-medium tracking-[0.4em] uppercase"
                 style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
               >
                 About Us
@@ -128,7 +128,7 @@ export default function About() {
                   {s.value}
                 </div>
                 <div
-                  className="text-[10px] tracking-[0.3em] uppercase font-medium"
+                  className="text-[12px] tracking-[0.3em] uppercase font-medium"
                   style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                 >
                   {s.label}
@@ -148,7 +148,7 @@ export default function About() {
             <motion.div {...fadeUp(0)}>
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-px" style={{ background: 'rgba(200,216,232,0.4)' }} />
-                <span className="text-[10px] font-medium tracking-[0.4em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                <span className="text-[12px] font-medium tracking-[0.4em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                   Our Story
                 </span>
               </div>
@@ -172,7 +172,7 @@ export default function About() {
 
               <div className="mt-10 flex items-center gap-3">
                 <MapPin size={14} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />
-                <span className="text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
+                <span className="text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>
                   142 2nd Avenue, Bredell AH, Kempton Park, South Africa, 1619
                 </span>
               </div>
@@ -204,14 +204,14 @@ export default function About() {
                 className="p-6"
                 style={{ background: 'var(--bg-surface)', border: '1px solid rgba(200,216,232,0.07)' }}
               >
-                <p className="text-[10px] font-medium tracking-[0.35em] uppercase mb-4" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+                <p className="text-[12px] font-medium tracking-[0.35em] uppercase mb-4" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                   What We Supply
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
                   {capabilities.map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
                       <CheckCircle size={12} strokeWidth={1.5} style={{ color: '#25D366', flexShrink: 0 }} />
-                      <span className="text-[12px] font-light" style={{ color: 'var(--text-muted)' }}>{item}</span>
+                      <span className="text-[14px] font-light" style={{ color: 'var(--text-muted)' }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -232,7 +232,7 @@ export default function About() {
           <motion.div {...fadeUp(0)} className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-8 h-px" style={{ background: 'rgba(200,216,232,0.3)' }} />
-              <span className="text-[10px] font-medium tracking-[0.4em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
+              <span className="text-[12px] font-medium tracking-[0.4em] uppercase" style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}>
                 Our Values
               </span>
               <div className="w-8 h-px" style={{ background: 'rgba(200,216,232,0.3)' }} />
@@ -262,12 +262,12 @@ export default function About() {
                   <v.icon size={20} strokeWidth={1.3} />
                 </div>
                 <h4
-                  className="text-[13px] font-semibold tracking-[0.1em] uppercase mb-3"
+                  className="text-[15px] font-semibold tracking-[0.1em] uppercase mb-3"
                   style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}
                 >
                   {v.title}
                 </h4>
-                <p className="text-[13px] leading-relaxed font-light" style={{ color: 'var(--text-muted)' }}>
+                <p className="text-[15px] leading-relaxed font-light" style={{ color: 'var(--text-muted)' }}>
                   {v.desc}
                 </p>
               </motion.div>
@@ -288,7 +288,7 @@ export default function About() {
         />
         <motion.div {...fadeUp(0)} className="relative max-w-[1400px] mx-auto px-6 lg:px-8 text-center">
           <p
-            className="text-[10px] font-medium tracking-[0.4em] uppercase mb-4"
+            className="text-[12px] font-medium tracking-[0.4em] uppercase mb-4"
             style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
           >
             Get In Touch
@@ -305,7 +305,7 @@ export default function About() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/plant"
-              className="inline-flex items-center gap-2 px-8 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
               style={{
                 fontFamily: 'var(--font-heading)',
                 background: 'var(--chrome-light)',
@@ -321,7 +321,7 @@ export default function About() {
               href="https://wa.me/27827800084"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
               style={{
                 fontFamily: 'var(--font-heading)',
                 background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',
