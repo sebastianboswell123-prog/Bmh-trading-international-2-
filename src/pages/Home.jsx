@@ -124,7 +124,7 @@ export default function Home() {
               key={heroIdx}
               src={heroImages[heroIdx]}
               alt={plantEquipment[heroIdx].name}
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-contain object-center lg:object-cover"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
