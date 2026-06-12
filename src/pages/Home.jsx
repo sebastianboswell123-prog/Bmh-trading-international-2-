@@ -349,7 +349,7 @@ export default function Home() {
       </section>
 
       {/* ═══ SERVICES ═══ */}
-      <section className="pt-28 pb-16 lg:pt-36 lg:pb-20 relative" style={{ background: 'var(--bg-deep)', borderTop: '1px solid rgba(200,216,232,0.04)' }}>
+      <section className="pt-28 pb-8 lg:pt-36 lg:pb-10 relative" style={{ background: 'var(--bg-deep)', borderTop: '1px solid rgba(200,216,232,0.04)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <SectionHeading
             label="What We Do"
@@ -405,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CTA BANNER ═══ */}
-      <section className="relative pt-12 pb-24 lg:pt-14 lg:pb-28 overflow-hidden" style={{ background: 'var(--bg-deep)' }}>
+      <section className="relative pt-6 pb-24 lg:pt-8 lg:pb-28 overflow-hidden" style={{ background: 'var(--bg-deep)' }}>
         {/* Atmospheric gradient */}
         <div
           className="absolute inset-0"
