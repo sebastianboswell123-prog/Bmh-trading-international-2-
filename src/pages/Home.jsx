@@ -165,7 +165,7 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full py-12 sm:py-24">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-8 w-full pt-28 pb-16 sm:pt-36 sm:pb-24">
           <div className="max-w-3xl">
             {/* Eyebrow */}
             <motion.div
