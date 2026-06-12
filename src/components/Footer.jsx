@@ -118,6 +118,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-[13px] font-light" style={{ color: 'var(--text-dim)' }}>
           &copy; {new Date().getFullYear()} BMH Trading International. All rights reserved.
+          <span className="block sm:inline sm:ml-2 opacity-70">Website built by Vaulta Collective</span>
         </p>
         <div className="flex gap-8">
           <span className="text-[13px] font-light cursor-pointer transition-colors duration-300 hover:text-[var(--text-muted)]" style={{ color: 'var(--text-dim)' }}>Privacy Policy</span>
