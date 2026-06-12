@@ -7,9 +7,17 @@ const IMG = {
   kom_exc:   `${BASE}/photo-1649807533255-bbc9c9fb7d77${Q}`,
   vol_exc:   `${BASE}/photo-1568678453977-a90de6812e7a${Q}`,
   hit_exc:   `${BASE}/photo-1719409391675-671023c5f807${Q}`,
+  sany_sy335: '/images/sany-sy335c.jpg',
   // ── FEL (Front End Loaders) ──
   cat_950h:  `${BASE}/photo-1652396614059-22f29cda1565${Q}`,
   kom_wa200: `${BASE}/photo-1757496156065-669f39ae77eb${Q}`,
+  cat_966l:  '/images/cat-966l.jpg',
+
+  // ── Crushing & Screening ──
+  metso_s211: '/images/metso-nordtrack-s211.jpg',
+
+  // ── Attachments ──
+  sany_b155:  '/images/sany-b155-breaker.jpg',
 
   // ── Dozers ──
   kom_bull:      `${BASE}/photo-1627451945663-5c1daa80cb20${Q}`,
@@ -87,8 +95,36 @@ export const plantEquipment = [
     description: 'Near-new with exceptionally low hours. Latest ZAXIS-7 series with redesigned hydraulic system delivering 10% greater fuel efficiency. Dual-mode bucket priority and e-Pilot proportional controls.',
     specs: { 'Engine Power': '193 kW (259 hp)', 'Operating Weight': '34,800 kg', 'Max Dig Depth': '7.40 m', 'Bucket Capacity': '1.5 m³' },
   },
+  {
+    id: 7,
+    name: 'Sany SY335C Excavator',
+    year: 2023,
+    hours: 'Low Hours',
+    brand: 'Sany',
+    category: 'Excavators',
+    status: 'Available',
+    condition: 'Used',
+    location: 'Kempton Park, Gauteng',
+    image: IMG.sany_sy335,
+    description: 'Near-new 33-tonne class excavator in excellent condition. Fuel-efficient engine with intelligent hydraulic control for fast, smooth cycles. Spacious ROPS cab with rear-view camera. Backed by a strong parts and service network across South Africa.',
+    specs: { 'Engine Power': '184 kW (247 hp)', 'Operating Weight': '33,800 kg', 'Max Dig Depth': '7.04 m', 'Bucket Capacity': '1.6 m³' },
+  },
 
   // ── FEL (FRONT END LOADERS) ─────────────────────────────────────────────────
+  {
+    id: 21,
+    name: 'Caterpillar 966L Wheel Loader',
+    year: 2019,
+    hours: 'Low Hours',
+    brand: 'Caterpillar',
+    category: 'FEL',
+    status: 'Available',
+    condition: 'Refurbished',
+    location: 'Kempton Park, Gauteng',
+    image: IMG.cat_966l,
+    description: 'Fully refurbished and repainted to an excellent standard. Proven Cat C9.3 ACERT engine paired with a fuel-efficient powershift transmission. Versatile general-purpose bucket fitted, ideal for quarrying, stockpiling, and load-and-carry work.',
+    specs: { 'Engine Power': '213 kW (286 hp)', 'Operating Weight': '23,400 kg', 'Bucket Capacity': '3.1–6.3 m³', 'Tipping Load': '15,800 kg' },
+  },
   {
     id: 19,
     name: 'Caterpillar 950H Wheel Loader',
@@ -226,6 +262,38 @@ export const plantEquipment = [
     specs: { 'Engine Power': '68 kW (91 hp)', 'Operating Weight': '3,700 kg', 'Rated Capacity': '1,089 kg', 'Bucket Capacity': '0.43 m³' },
   },
 
+  // ── CRUSHING & SCREENING ─────────────────────────────────────────────────────
+  {
+    id: 41,
+    name: 'Metso Nordtrack S2.11 Mobile Screen',
+    year: 2021,
+    hours: 'Low Hours',
+    brand: 'Metso',
+    category: 'Crushing & Screening',
+    status: 'Available',
+    condition: 'Used',
+    location: 'Kempton Park, Gauteng',
+    image: IMG.metso_s211,
+    description: 'Compact track-mounted double-deck scalping screen for contractors and aggregate producers. Quick set-up, fuel-efficient CAT diesel power unit, and hydraulically folding conveyors for easy transport. Produces up to three calibrated products in one pass.',
+    specs: { 'Screen Type': 'Double Deck', 'Capacity': 'Up to 350 tph', 'Feed Hopper': '5 m³', 'Power Unit': 'CAT Diesel' },
+  },
+
+  // ── ATTACHMENTS ──────────────────────────────────────────────────────────────
+  {
+    id: 42,
+    name: 'Sany B155 Hydraulic Breaker',
+    year: 2024,
+    hours: 'New',
+    brand: 'Sany',
+    category: 'Attachments',
+    status: 'Available',
+    condition: 'New',
+    location: 'Kempton Park, Gauteng',
+    image: IMG.sany_b155,
+    description: 'Brand-new side-type hydraulic breaker suited to 20–30 tonne excavators. High impact energy for demolition, trenching, and rock breaking. Supplied with mounting bracket and genuine Sany hoses. Multiple units available ex-stock.',
+    specs: { 'Carrier Class': '20–30 t Excavator', 'Chisel Diameter': '155 mm', 'Type': 'Side-Type Hydraulic Hammer', 'Condition': 'New, Crated' },
+  },
+
 ];
 
 // Parts removed — this site focuses on equipment marketplace
@@ -235,7 +303,7 @@ export const partsCategories = ['All'];
 // Full brand lineup for the ticker
 export const brands = [
   'Caterpillar', 'Komatsu', 'Volvo', 'Hitachi', 'Liebherr', 'Shantui',
-  'Grove', 'Tadano', 'John Deere', 'Toyota', 'JLG',
+  'Sany', 'Metso', 'Grove', 'Tadano', 'John Deere', 'Toyota', 'JLG',
 ];
 
 export const equipmentCategories = [
@@ -247,6 +315,8 @@ export const equipmentCategories = [
   'Dozers',
   'Forklifts',
   'Skidsteers',
+  'Crushing & Screening',
+  'Attachments',
 ];
 
 export const companyInfo = {

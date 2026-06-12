@@ -1,10 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowUpRight } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
-import { EMAILJS_CONFIG } from '../utils/emailService';
 
 const contactDetails = [
   {
@@ -34,56 +31,6 @@ const contactDetails = [
 ];
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
-  const formRef = useRef();
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
-    setStatus('sending');
-    try {
-      // Replace these with your EmailJS credentials from emailjs.com
-      await emailjs.sendForm(
-        EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_CONTACT,
-        formRef.current,
-        EMAILJS_CONFIG.PUBLIC_KEY
-      );
-      setStatus('success');
-      setForm({ name: '', email: '', phone: '', subject: '', message: '' });
-    } catch {
-      setStatus('error');
-    }
-  };
-
-  const inputStyle = {
-    background: 'rgba(200,216,232,0.03)',
-    border: '1px solid rgba(200,216,232,0.08)',
-    color: 'var(--text-primary)',
-    fontFamily: 'var(--font-body)',
-    fontSize: '14px',
-    fontWeight: 300,
-    padding: '13px 16px',
-    width: '100%',
-    outline: 'none',
-    transition: 'border-color 0.3s, background 0.3s',
-    WebkitAppearance: 'none',
-    MozAppearance: 'none',
-    appearance: 'none',
-  };
-
-  const selectStyle = {
-    ...inputStyle,
-    cursor: 'pointer',
-    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A5F6E' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'right 14px center',
-    paddingRight: '36px',
-  };
-
   return (
     <>
       <Helmet>
@@ -114,7 +61,7 @@ export default function Contact() {
 
       <section className="py-16 lg:py-24" style={{ background: 'var(--bg-deep)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
             {/* Contact info */}
             <div className="lg:col-span-2 space-y-4">
               {contactDetails.map((item, i) => (
@@ -158,105 +105,49 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Form */}
+            {/* WhatsApp CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
-              className="lg:col-span-3 p-6 lg:p-10"
+              className="lg:col-span-3 p-8 lg:p-12 flex flex-col items-start justify-center"
               style={{ background: 'var(--bg-surface)', border: '1px solid rgba(200,216,232,0.06)' }}
             >
-              <h3 className="uppercase leading-[0.95] mb-8" style={{ fontFamily: 'var(--font-display)', color: 'var(--chrome-light)', fontSize: '28px' }}>
-                Send an Enquiry
+              <h3 className="uppercase leading-[0.95] mb-5" style={{ fontFamily: 'var(--font-display)', color: 'var(--chrome-light)', fontSize: '32px' }}>
+                Talk to Our Team
               </h3>
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <input type="hidden" name="to_email" value={EMAILJS_CONFIG.TO_EMAIL} />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input type="text" name="name" placeholder="Full Name *" value={form.name} onChange={handleChange} style={inputStyle}
-                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)'; e.currentTarget.style.background = 'rgba(200,216,232,0.05)'; }}
-                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.08)'; e.currentTarget.style.background = 'rgba(200,216,232,0.03)'; }}
-                  />
-                  <input type="email" name="email" placeholder="Email Address *" value={form.email} onChange={handleChange} style={inputStyle}
-                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)'; e.currentTarget.style.background = 'rgba(200,216,232,0.05)'; }}
-                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.08)'; e.currentTarget.style.background = 'rgba(200,216,232,0.03)'; }}
-                  />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={handleChange} style={inputStyle}
-                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)'; e.currentTarget.style.background = 'rgba(200,216,232,0.05)'; }}
-                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.08)'; e.currentTarget.style.background = 'rgba(200,216,232,0.03)'; }}
-                  />
-                  <select name="subject" value={form.subject} onChange={handleChange}
-                    style={{ ...selectStyle, color: form.subject ? 'var(--text-primary)' : 'var(--text-dim)' }}
-                    onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)'; e.currentTarget.style.background = 'rgba(200,216,232,0.05)'; }}
-                    onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.08)'; e.currentTarget.style.background = 'rgba(200,216,232,0.03)'; }}
-                  >
-                    <option value="" style={{ background: '#15355A', color: 'var(--text-dim)' }}>Subject</option>
-                    <option value="plant" style={{ background: '#15355A', color: 'var(--text-primary)' }}>Plant / Equipment Enquiry</option>
-                    <option value="parts" style={{ background: '#15355A', color: 'var(--text-primary)' }}>Parts Enquiry</option>
-                    <option value="rental" style={{ background: '#15355A', color: 'var(--text-primary)' }}>Rental Enquiry</option>
-                    <option value="general" style={{ background: '#15355A', color: 'var(--text-primary)' }}>General Enquiry</option>
-                  </select>
-                </div>
-                <textarea name="message" placeholder="Your Message *" rows={5} value={form.message} onChange={handleChange}
-                  style={{ ...inputStyle, resize: 'vertical' }}
-                  onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)'; e.currentTarget.style.background = 'rgba(200,216,232,0.05)'; }}
-                  onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.08)'; e.currentTarget.style.background = 'rgba(200,216,232,0.03)'; }}
-                />
-                <button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    background: status === 'success' ? 'rgba(37,211,102,0.12)' : 'rgba(200,216,232,0.08)',
-                    color: status === 'success' ? '#6ee7a0' : 'var(--chrome-light)',
-                    border: `1px solid ${status === 'success' ? 'rgba(37,211,102,0.3)' : 'rgba(200,216,232,0.2)'}`,
-                  }}
-                  onMouseEnter={(e) => {
-                    if (status !== 'success') {
-                      e.currentTarget.style.background = 'rgba(200,216,232,0.14)';
-                      e.currentTarget.style.borderColor = 'rgba(200,216,232,0.35)';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (status !== 'success') {
-                      e.currentTarget.style.background = 'rgba(200,216,232,0.08)';
-                      e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }
-                  }}
-                >
-                  <Send size={13} strokeWidth={1.5} />
-                  {status === 'sending' ? 'Sending…' : status === 'success' ? 'Enquiry Sent!' : 'Send Enquiry'}
-                </button>
-                {status === 'error' && (
-                  <p className="text-[14px] mt-2" style={{ color: '#f87171' }}>
-                    Something went wrong. Please try WhatsApp or email directly.
-                  </p>
-                )}
-              </form>
+              <p className="text-[15px] font-light mb-8 max-w-xl" style={{ color: 'var(--text-muted)' }}>
+                Message us directly on WhatsApp for the fastest response. Our team is available Monday to Saturday to answer any equipment, parts, or rental enquiries.
+              </p>
+              <a
+                href="https://wa.me/27827800084"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-8 py-4 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  background: 'rgba(37,211,102,0.12)',
+                  color: '#6ee7a0',
+                  border: '1px solid rgba(37,211,102,0.3)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(37,211,102,0.2)';
+                  e.currentTarget.style.borderColor = 'rgba(37,211,102,0.5)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(37,211,102,0.12)';
+                  e.currentTarget.style.borderColor = 'rgba(37,211,102,0.3)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <Phone size={13} strokeWidth={1.5} />
+                Contact Us
+                <ArrowUpRight size={13} strokeWidth={1.5} />
+              </a>
             </motion.div>
           </div>
-
-          {/* Map */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-12 w-full overflow-hidden"
-            style={{ border: '1px solid rgba(200,216,232,0.06)', aspectRatio: '21/6' }}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.0!2d28.3!3d-26.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBredell%20AH%20Kempton%20Park!5e0!3m2!1sen!2sza!4v1"
-              width="100%" height="100%"
-              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) saturate(0.3) brightness(0.7)' }}
-              allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-              title="BMH Trading International Location"
-            />
-          </motion.div>
         </div>
       </section>
     </>
