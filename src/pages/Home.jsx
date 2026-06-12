@@ -278,12 +278,12 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-10 sm:mt-14 flex flex-wrap gap-x-14 gap-y-6"
+            className="mt-10 sm:mt-14 flex flex-wrap justify-center gap-x-14 gap-y-6 text-center"
           >
             {stats.map((stat, i) => (
               <div
                 key={i}
-                className={`${i > 0 ? 'sm:pl-10 sm:border-l' : ''}`}
+                className={`${i > 0 ? 'sm:pl-14 sm:border-l' : ''}`}
                 style={{ borderColor: 'rgba(200,216,232,0.06)' }}
               >
                 <div
