@@ -349,7 +349,7 @@ export default function Home() {
       </section>
 
       {/* ═══ SERVICES ═══ */}
-      <section className="py-28 lg:py-36 relative" style={{ background: 'var(--bg-deep)', borderTop: '1px solid rgba(200,216,232,0.04)' }}>
+      <section className="pt-28 pb-16 lg:pt-36 lg:pb-20 relative" style={{ background: 'var(--bg-deep)', borderTop: '1px solid rgba(200,216,232,0.04)' }}>
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <SectionHeading
             label="What We Do"
@@ -405,7 +405,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CTA BANNER ═══ */}
-      <section className="relative py-28 lg:py-32 overflow-hidden" style={{ background: 'var(--bg-deep)' }}>
+      <section className="relative pt-12 pb-24 lg:pt-14 lg:pb-28 overflow-hidden" style={{ background: 'var(--bg-deep)' }}>
         {/* Atmospheric gradient */}
         <div
           className="absolute inset-0"
@@ -414,7 +414,7 @@ export default function Home() {
           }}
         />
         <div className="relative max-w-[1400px] mx-auto px-6 lg:px-8">
-          <div className="luxury-divider mb-16" />
+          <div className="luxury-divider mb-10" />
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
             <div className="max-w-xl">
               <div className="flex items-center gap-3 mb-4">
