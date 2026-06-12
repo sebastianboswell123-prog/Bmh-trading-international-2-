@@ -72,7 +72,7 @@ export default function About() {
           <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(180deg, rgba(8,14,26,0.55) 0%, rgba(8,14,26,0.3) 40%, rgba(8,14,26,0.85) 80%, rgba(8,14,26,1) 100%)',
+              background: 'linear-gradient(180deg, rgba(15,42,74,0.55) 0%, rgba(15,42,74,0.3) 40%, rgba(15,42,74,0.85) 80%, rgba(15,42,74,1) 100%)',
             }}
           />
         </div>
@@ -195,7 +195,7 @@ export default function About() {
                 />
                 <div
                   className="absolute inset-0 pointer-events-none"
-                  style={{ background: 'linear-gradient(180deg, transparent 50%, rgba(8,14,26,0.6) 100%)' }}
+                  style={{ background: 'linear-gradient(180deg, transparent 50%, rgba(15,42,74,0.6) 100%)' }}
                 />
               </div>
 

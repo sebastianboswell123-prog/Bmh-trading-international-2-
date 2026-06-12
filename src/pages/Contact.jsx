@@ -93,14 +93,14 @@ export default function Contact() {
         <meta property="og:description" content="Reach our team in Kempton Park, Gauteng. WhatsApp available. Equipment enquiries answered within 24 hours." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bmhtradinginternational.com/contact" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1628645419184-26a1f2757340?w=1200&h=630&fit=crop&q=80" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Contact BMH Trading International — Kempton Park, South Africa" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact BMH Trading International | Kempton Park, South Africa" />
         <meta name="twitter:description" content="Reach our team in Kempton Park, Gauteng. WhatsApp available. Equipment enquiries answered within 24 hours." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1628645419184-26a1f2757340?w=1200&h=630&fit=crop&q=80" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
         <link rel="canonical" href="https://www.bmhtradinginternational.com/contact" />
       </Helmet>
       <section
@@ -192,11 +192,11 @@ export default function Contact() {
                     onFocus={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)'; e.currentTarget.style.background = 'rgba(200,216,232,0.05)'; }}
                     onBlur={(e) => { e.currentTarget.style.borderColor = 'rgba(200,216,232,0.08)'; e.currentTarget.style.background = 'rgba(200,216,232,0.03)'; }}
                   >
-                    <option value="" style={{ background: '#0D1929', color: 'var(--text-dim)' }}>Subject</option>
-                    <option value="plant" style={{ background: '#0D1929', color: 'var(--text-primary)' }}>Plant / Equipment Enquiry</option>
-                    <option value="parts" style={{ background: '#0D1929', color: 'var(--text-primary)' }}>Parts Enquiry</option>
-                    <option value="rental" style={{ background: '#0D1929', color: 'var(--text-primary)' }}>Rental Enquiry</option>
-                    <option value="general" style={{ background: '#0D1929', color: 'var(--text-primary)' }}>General Enquiry</option>
+                    <option value="" style={{ background: '#15355A', color: 'var(--text-dim)' }}>Subject</option>
+                    <option value="plant" style={{ background: '#15355A', color: 'var(--text-primary)' }}>Plant / Equipment Enquiry</option>
+                    <option value="parts" style={{ background: '#15355A', color: 'var(--text-primary)' }}>Parts Enquiry</option>
+                    <option value="rental" style={{ background: '#15355A', color: 'var(--text-primary)' }}>Rental Enquiry</option>
+                    <option value="general" style={{ background: '#15355A', color: 'var(--text-primary)' }}>General Enquiry</option>
                   </select>
                 </div>
                 <textarea name="message" placeholder="Your Message *" rows={5} value={form.message} onChange={handleChange}

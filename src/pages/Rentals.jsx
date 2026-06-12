@@ -112,14 +112,14 @@ export default function Rentals() {
         <meta property="og:description" content="Excavators, wheel loaders & dozers for hire in South Africa. Short & long-term rental options available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bmhtradinginternational.com/rentals" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1628645419184-26a1f2757340?w=1200&h=630&fit=crop&q=80" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Construction equipment for hire South Africa — BMH Trading International" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Construction Equipment Rental South Africa | BMH Trading International" />
         <meta name="twitter:description" content="Excavators, wheel loaders & dozers for hire in South Africa. Short & long-term rental options available." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1628645419184-26a1f2757340?w=1200&h=630&fit=crop&q=80" />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
         <link rel="canonical" href="https://www.bmhtradinginternational.com/rentals" />
       </Helmet>
 
@@ -156,10 +156,10 @@ export default function Rentals() {
               >
                 <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
                   <img src={cat.image} alt={`${cat.title} for hire in South Africa`} className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.06]" />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(8,14,26,0.1) 0%, transparent 30%, transparent 40%, rgba(8,14,26,0.85) 100%)' }} />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(15,42,74,0.1) 0%, transparent 30%, transparent 40%, rgba(15,42,74,0.85) 100%)' }} />
                   <div className="absolute bottom-4 left-5">
                     <span className="text-[9px] font-medium tracking-[0.3em] uppercase px-3 py-1 backdrop-blur-sm"
-                      style={{ fontFamily: 'var(--font-heading)', background: 'rgba(8,14,26,0.6)', color: 'var(--chrome)', border: '1px solid rgba(200,216,232,0.1)' }}>
+                      style={{ fontFamily: 'var(--font-heading)', background: 'rgba(15,42,74,0.6)', color: 'var(--chrome)', border: '1px solid rgba(200,216,232,0.1)' }}>
                       For Hire
                     </span>
                   </div>
@@ -342,9 +342,9 @@ export default function Rentals() {
                       style={{ ...selectStyle, color: form.equipment ? 'var(--text-primary)' : 'var(--text-dim)' }}
                       onFocus={focusIn} onBlur={focusOut}
                     >
-                      <option value="" style={{ background: '#0D1929', color: 'var(--text-dim)' }}>Equipment Type *</option>
+                      <option value="" style={{ background: '#15355A', color: 'var(--text-dim)' }}>Equipment Type *</option>
                       {equipmentOptions.map((o) => (
-                        <option key={o} value={o} style={{ background: '#0D1929', color: 'var(--text-primary)' }}>{o}</option>
+                        <option key={o} value={o} style={{ background: '#15355A', color: 'var(--text-primary)' }}>{o}</option>
                       ))}
                     </select>
                     <select
@@ -352,9 +352,9 @@ export default function Rentals() {
                       style={{ ...selectStyle, color: form.duration ? 'var(--text-primary)' : 'var(--text-dim)' }}
                       onFocus={focusIn} onBlur={focusOut}
                     >
-                      <option value="" style={{ background: '#0D1929', color: 'var(--text-dim)' }}>Hire Duration</option>
+                      <option value="" style={{ background: '#15355A', color: 'var(--text-dim)' }}>Hire Duration</option>
                       {durationOptions.map((o) => (
-                        <option key={o} value={o} style={{ background: '#0D1929', color: 'var(--text-primary)' }}>{o}</option>
+                        <option key={o} value={o} style={{ background: '#15355A', color: 'var(--text-primary)' }}>{o}</option>
                       ))}
                     </select>
                   </div>

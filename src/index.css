@@ -3,11 +3,11 @@
 @import "tailwindcss";
 
 :root {
-  --bg-deep: #080E1A;
-  --bg-alt: #0D1929;
-  --bg-surface: #0F2137;
-  --bg-steel: #1E2A35;
-  --bg-hover: #2A3F55;
+  --bg-deep: #0F2A4A;
+  --bg-alt: #15355A;
+  --bg-surface: #1B3F69;
+  --bg-steel: #2a4d73;
+  --bg-hover: #34597f;
   --chrome: #C8D8E8;
   --chrome-light: #E8F0F8;
   --accent: #C8D8E8;

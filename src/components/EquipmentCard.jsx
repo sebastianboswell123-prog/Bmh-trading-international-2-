@@ -4,7 +4,7 @@ import { Clock, Tag, ArrowUpRight, MapPin } from 'lucide-react';
 export default function EquipmentCard({ item, index = 0 }) {
   const conditionColor = item.condition === 'Refurbished'
     ? { bg: 'rgba(37,211,102,0.15)', border: 'rgba(37,211,102,0.3)', text: '#6ee7a0' }
-    : { bg: 'rgba(8,14,26,0.7)', border: 'rgba(200,216,232,0.1)', text: 'var(--chrome)' };
+    : { bg: 'rgba(15,42,74,0.7)', border: 'rgba(200,216,232,0.1)', text: 'var(--chrome)' };
 
   return (
     <motion.div
@@ -30,7 +30,7 @@ export default function EquipmentCard({ item, index = 0 }) {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'linear-gradient(180deg, rgba(8,14,26,0.1) 0%, transparent 30%, transparent 50%, rgba(8,14,26,0.8) 100%)',
+            background: 'linear-gradient(180deg, rgba(15,42,74,0.1) 0%, transparent 30%, transparent 50%, rgba(15,42,74,0.8) 100%)',
           }}
         />
         {/* Condition badge */}
@@ -50,7 +50,7 @@ export default function EquipmentCard({ item, index = 0 }) {
           className="absolute top-4 right-4 px-2.5 py-1 text-[12px] font-semibold tracking-wider backdrop-blur-sm"
           style={{
             fontFamily: 'var(--font-heading)',
-            background: 'rgba(8,14,26,0.6)',
+            background: 'rgba(15,42,74,0.6)',
             color: 'var(--chrome-light)',
             border: '1px solid rgba(200,216,232,0.08)',
           }}
@@ -88,7 +88,7 @@ export default function EquipmentCard({ item, index = 0 }) {
         <div className="flex flex-wrap items-center gap-3 mb-3">
           <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
             <Clock size={11} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />
-            {item.hours} hrs
+            {/^[\d.,]+$/.test(String(item.hours)) ? `${item.hours} hrs` : item.hours}
           </span>
           <span className="flex items-center gap-1.5 text-[13px] font-light" style={{ color: 'var(--text-muted)' }}>
             <Tag size={11} strokeWidth={1.5} style={{ color: 'var(--text-dim)' }} />

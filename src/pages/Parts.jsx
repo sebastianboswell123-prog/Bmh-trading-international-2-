@@ -287,9 +287,9 @@ export default function Parts() {
                       style={{ ...selectStyle, color: form.brand ? 'var(--text-primary)' : 'var(--text-dim)' }}
                       onFocus={focusIn} onBlur={focusOut}
                     >
-                      <option value="" style={{ background: '#0D1929', color: 'var(--text-dim)' }}>Machine Brand *</option>
+                      <option value="" style={{ background: '#15355A', color: 'var(--text-dim)' }}>Machine Brand *</option>
                       {brands.map((b) => (
-                        <option key={b} value={b} style={{ background: '#0D1929', color: 'var(--text-primary)' }}>{b}</option>
+                        <option key={b} value={b} style={{ background: '#15355A', color: 'var(--text-primary)' }}>{b}</option>
                       ))}
                     </select>
                     <input

@@ -71,9 +71,9 @@ export default function News() {
               >
                 <div className="relative overflow-hidden" style={{ aspectRatio: '16/10' }}>
                   <img src={article.image} alt={article.title} className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.06]" />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(8,14,26,0.1) 0%, transparent 30%, transparent 50%, rgba(8,14,26,0.8) 100%)' }} />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(15,42,74,0.1) 0%, transparent 30%, transparent 50%, rgba(15,42,74,0.8) 100%)' }} />
                   <span className="absolute top-4 left-4 px-3 py-1 text-[9px] font-medium tracking-[0.25em] uppercase backdrop-blur-sm"
-                    style={{ fontFamily: 'var(--font-heading)', background: 'rgba(8,14,26,0.6)', color: 'var(--chrome)', border: '1px solid rgba(200,216,232,0.1)' }}>
+                    style={{ fontFamily: 'var(--font-heading)', background: 'rgba(15,42,74,0.6)', color: 'var(--chrome)', border: '1px solid rgba(200,216,232,0.1)' }}>
                     {article.category}
                   </span>
                 </div>

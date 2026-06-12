@@ -6,8 +6,8 @@ import { ArrowRight, Shield, Globe, Wrench, Truck, Phone, ArrowUpRight } from 'l
 import SectionHeading from '../components/SectionHeading';
 import { plantEquipment, brands } from '../data/equipment';
 
-// Curated hero slideshow — excavators, dozers, cranes, dumpers, TLB, skid steer, telehandler
-const HERO_IDS = [1, 5, 4, 3, 11, 13, 12, 16, 33, 34];
+// Curated hero slideshow — excavators, dozer, dumper, skid steer
+const HERO_IDS = [1, 4, 3, 11, 16, 33, 2];
 const heroImages = HERO_IDS
   .map((id) => plantEquipment.find((item) => item.id === id))
   .filter(Boolean)
@@ -136,8 +136,8 @@ export default function Home() {
             className="absolute inset-0"
             style={{
               background: `
-                linear-gradient(105deg, rgba(8,14,26,0.72) 0%, rgba(8,14,26,0.45) 50%, rgba(8,14,26,0.25) 100%),
-                linear-gradient(to top, rgba(8,14,26,1) 0%, transparent 40%)
+                linear-gradient(105deg, rgba(15,42,74,0.72) 0%, rgba(15,42,74,0.45) 50%, rgba(15,42,74,0.25) 100%),
+                linear-gradient(to top, rgba(15,42,74,1) 0%, transparent 40%)
               `,
             }}
           />
@@ -230,7 +230,7 @@ export default function Home() {
                 style={{
                   fontFamily: 'var(--font-heading)',
                   background: '#ffffff',
-                  color: '#080E1A',
+                  color: '#0F2A4A',
                   border: '1px solid #ffffff',
                   boxShadow: '0 8px 30px rgba(255,255,255,0.25)',
                 }}
