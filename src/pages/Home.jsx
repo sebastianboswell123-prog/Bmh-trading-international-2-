@@ -14,8 +14,6 @@ const heroImages = HERO_IDS
   .map((item) => item.image.replace('w=900', 'w=1800').replace('q=80', 'q=85'));
 
 const stats = [
-  { value: String(plantEquipment.length), label: 'Machines In Stock' },
-  { value: '14+', label: 'Leading Brands' },
   { value: '15+', label: 'Years Experience' },
   { value: '30+', label: 'Countries Served' },
 ];
@@ -229,22 +227,22 @@ export default function Home() {
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-400"
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  background: '#0F2A4A',
+                  background: '#1C3A60',
                   color: '#E8F0F8',
                   border: '1px solid rgba(200,216,232,0.35)',
-                  boxShadow: '0 8px 30px rgba(15,42,74,0.5)',
+                  boxShadow: '0 8px 30px rgba(28,58,96,0.5)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#16395F';
+                  e.currentTarget.style.background = '#244A78';
                   e.currentTarget.style.borderColor = 'rgba(200,216,232,0.6)';
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 14px 44px rgba(15,42,74,0.6)';
+                  e.currentTarget.style.boxShadow = '0 14px 44px rgba(28,58,96,0.6)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#0F2A4A';
+                  e.currentTarget.style.background = '#1C3A60';
                   e.currentTarget.style.borderColor = 'rgba(200,216,232,0.35)';
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(15,42,74,0.5)';
+                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(28,58,96,0.5)';
                 }}
               >
                 View Stock
@@ -280,22 +278,22 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 sm:mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-0"
+            className="mt-12 sm:mt-24 flex flex-wrap gap-x-10 gap-y-6"
           >
             {stats.map((stat, i) => (
               <div
                 key={i}
-                className={`${i > 0 ? 'lg:pl-8 lg:border-l' : ''}`}
+                className={`${i > 0 ? 'sm:pl-10 sm:border-l' : ''}`}
                 style={{ borderColor: 'rgba(200,216,232,0.06)' }}
               >
                 <div
-                  className="stat-number text-4xl lg:text-5xl"
+                  className="stat-number text-3xl sm:text-4xl"
                   style={{ color: 'var(--chrome-light)' }}
                 >
                   {stat.value}
                 </div>
                 <div
-                  className="text-[12px] tracking-[0.3em] uppercase mt-1 font-medium"
+                  className="text-[11px] tracking-[0.2em] uppercase mt-1 font-medium whitespace-nowrap"
                   style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
                 >
                   {stat.label}
