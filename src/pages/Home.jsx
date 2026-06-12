@@ -113,7 +113,7 @@ export default function Home() {
       </Helmet>
 
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-[94vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[78vh] lg:min-h-[82vh] flex items-center overflow-hidden">
         {/* Background layers */}
         <div className="absolute inset-0">
           {/* Hero background slideshow — cycles through all stock */}
@@ -278,7 +278,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 sm:mt-24 flex flex-wrap gap-x-10 gap-y-6"
+            className="mt-10 sm:mt-14 flex flex-wrap gap-x-14 gap-y-6"
           >
             {stats.map((stat, i) => (
               <div
