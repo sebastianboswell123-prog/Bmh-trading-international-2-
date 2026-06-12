@@ -310,7 +310,7 @@ export default function Home() {
       <section
         className="py-12 relative overflow-hidden"
         style={{
-          background: 'var(--bg-surface)',
+          background: '#1C3A60',
           borderTop: '1px solid rgba(200,216,232,0.10)',
           borderBottom: '1px solid rgba(200,216,232,0.10)',
         }}
