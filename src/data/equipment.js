@@ -98,8 +98,8 @@ export const plantEquipment = [
   {
     id: 7,
     name: 'Sany SY335C Excavator',
-    year: 2023,
-    hours: 'Low Hours',
+    year: 'N/A',
+    hours: 'N/A',
     brand: 'Sany',
     category: 'Excavators',
     status: 'Available',
@@ -114,8 +114,8 @@ export const plantEquipment = [
   {
     id: 21,
     name: 'Caterpillar 966L Wheel Loader',
-    year: 2019,
-    hours: 'Low Hours',
+    year: 'N/A',
+    hours: 'N/A',
     brand: 'Caterpillar',
     category: 'FEL',
     status: 'Available',
@@ -172,8 +172,8 @@ export const plantEquipment = [
   {
     id: 5,
     name: 'Shantui SD32 Dozer',
-    year: 2023,
-    hours: 'Low Hours',
+    year: 'N/A',
+    hours: 'N/A',
     brand: 'Shantui',
     category: 'Dozers',
     status: 'Available',
@@ -186,8 +186,8 @@ export const plantEquipment = [
   {
     id: 6,
     name: 'Komatsu D375A Dozer',
-    year: 2015,
-    hours: 'Available on request',
+    year: 'N/A',
+    hours: 'N/A',
     brand: 'Komatsu',
     category: 'Dozers',
     status: 'Available',
@@ -266,8 +266,8 @@ export const plantEquipment = [
   {
     id: 41,
     name: 'Metso Nordtrack S2.11 Mobile Screen',
-    year: 2021,
-    hours: 'Low Hours',
+    year: 'N/A',
+    hours: 'N/A',
     brand: 'Metso',
     category: 'Crushing & Screening',
     status: 'Available',
@@ -282,8 +282,8 @@ export const plantEquipment = [
   {
     id: 42,
     name: 'Sany B155 Hydraulic Breaker',
-    year: 2024,
-    hours: 'New',
+    year: 'N/A',
+    hours: 'N/A',
     brand: 'Sany',
     category: 'Attachments',
     status: 'Available',
@@ -302,8 +302,8 @@ export const partsCategories = ['All'];
 
 // Full brand lineup for the ticker
 export const brands = [
-  'Caterpillar', 'Komatsu', 'Volvo', 'Hitachi', 'Liebherr', 'Shantui',
-  'Sany', 'Metso', 'Grove', 'Tadano', 'John Deere', 'Toyota', 'JLG',
+  'Caterpillar', 'Komatsu', 'Volvo', 'Hitachi',
+  'Sany', 'Shantui', 'Metso', 'John Deere', 'Toyota',
 ];
 
 export const equipmentCategories = [

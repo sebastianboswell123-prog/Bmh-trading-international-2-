@@ -326,18 +326,15 @@ export default function Home() {
             <div className="h-[1px] w-10 shrink-0" style={{ background: 'rgba(200,216,232,0.2)' }} />
           </div>
           {/* Scrollable brand strip */}
-          <div
-            className="brands-strip flex items-center gap-6 lg:gap-10 overflow-x-auto pb-1"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
+          <div className="brands-strip flex flex-wrap items-center justify-center gap-x-5 gap-y-3 lg:gap-x-8">
             {brands.map((brand, i) => (
               <span
                 key={brand}
-                className="flex items-center gap-6 lg:gap-10 shrink-0"
+                className="flex items-center gap-x-5 lg:gap-x-8"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 <span
-                  className="text-lg lg:text-xl tracking-[0.06em] uppercase transition-colors duration-300 cursor-default hover:text-[var(--chrome-light)]"
+                  className="text-base sm:text-lg lg:text-xl tracking-[0.06em] uppercase transition-colors duration-300 cursor-default hover:text-[var(--chrome-light)] whitespace-nowrap"
                   style={{ color: 'var(--chrome)', opacity: 0.85 }}
                 >
                   {brand}
