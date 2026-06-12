@@ -5,7 +5,6 @@ const IMG = {
   // ── Excavators ──
   cat_exc:   `${BASE}/photo-1503708928676-1cb796a0891e${Q}`,
   kom_exc:   `${BASE}/photo-1649807533255-bbc9c9fb7d77${Q}`,
-  vol_exc:   `${BASE}/photo-1568678453977-a90de6812e7a${Q}`,
   hit_exc:   `${BASE}/photo-1719409391675-671023c5f807${Q}`,
   sany_sy335: '/images/sany-sy335c.jpg',
   // ── FEL (Front End Loaders) ──
@@ -20,21 +19,14 @@ const IMG = {
   sany_b155:  '/images/sany-b155-breaker.jpg',
 
   // ── Dozers ──
-  kom_bull:      `${BASE}/photo-1627451945663-5c1daa80cb20${Q}`,
   shantui_sd32:  '/images/shantui-sd32.jpg',
   komatsu_d375a: '/images/komatsu-d375a.jpg',
-
-  // ── Dumpers ──
-  vol_dump:  `${BASE}/photo-1629807472592-2649bfa09f9c${Q}`,
 
   // ── TLB ──
   jd_tlb:    `${BASE}/photo-1646881478375-2a40ff90b803${Q}`,
 
   // ── Forklifts ──
   fork_1:    `${BASE}/photo-1620388640785-892616248ec8${Q}`,
-
-  // ── Skidsteers ──
-  skid_1:    `${BASE}/photo-1669170941335-07ca7e9dcd73${Q}`,
 };
 
 export const plantEquipment = [
@@ -66,20 +58,6 @@ export const plantEquipment = [
     image: IMG.kom_exc,
     description: 'KOMTRAX telematics active — full machine history verifiable remotely. Preferred for fuel economy and reliability in high-temperature conditions. Undercarriage at 75% remaining life.',
     specs: { 'Engine Power': '155 kW (208 hp)', 'Operating Weight': '29,500 kg', 'Max Dig Depth': '7.23 m', 'Bucket Capacity': '1.2 m³' },
-  },
-  {
-    id: 3,
-    name: 'Volvo EC380E Excavator',
-    year: 2019,
-    hours: '3,200',
-    brand: 'Volvo',
-    category: 'Excavators',
-    status: 'Available',
-    condition: 'Refurbished',
-    location: 'Kempton Park, Gauteng',
-    image: IMG.vol_exc,
-    description: 'Fully refurbished to Volvo Certified Rebuilt standard — new undercarriage, hydraulic pump overhaul, cab interior restored, and full repaint. Three-month mechanical warranty provided.',
-    specs: { 'Engine Power': '210 kW (282 hp)', 'Operating Weight': '38,100 kg', 'Max Dig Depth': '7.35 m', 'Bucket Capacity': '1.9 m³' },
   },
   {
     id: 4,
@@ -156,20 +134,6 @@ export const plantEquipment = [
 
   // ── DOZERS ───────────────────────────────────────────────────────────────────
   {
-    id: 11,
-    name: 'Komatsu D65PX-18 Dozer',
-    year: 2019,
-    hours: '2,700',
-    brand: 'Komatsu',
-    category: 'Dozers',
-    status: 'Available',
-    condition: 'Refurbished',
-    location: 'Kempton Park, Gauteng',
-    image: IMG.kom_bull,
-    description: 'Fully refurbished — new track shoes, rollers, and idlers fitted. Wide-gauge track design provides outstanding flotation and stability on soft ground. Komatsu iMC ready for GPS dozing.',
-    specs: { 'Engine Power': '168 kW (225 hp)', 'Operating Weight': '21,945 kg', 'Blade Capacity': '4.8 m³ (Semi-U)', 'Track Gauge': 'Extra-Wide PX' },
-  },
-  {
     id: 5,
     name: 'Shantui SD32 Dozer',
     year: 'N/A',
@@ -196,22 +160,6 @@ export const plantEquipment = [
     image: IMG.komatsu_d375a,
     description: 'Heavy production mining dozer in strong working condition. SIGMADOZER semi-U blade for high-efficiency earthmoving and a giant single-shank ripper fitted at the rear. Proven Komatsu SAA6D170E engine with KOMTRAX telematics. Built for large-scale mining and quarry operations.',
     specs: { 'Engine Power': '455 kW (610 hp)', 'Operating Weight': '71,000 kg', 'Blade Capacity': '18.5 m³ (Semi-U)', 'Attachment': 'Giant Single-Shank Ripper' },
-  },
-
-  // ── DUMPERS ──────────────────────────────────────────────────────────────────
-  {
-    id: 16,
-    name: 'Volvo A45G Articulated Dumper',
-    year: 2019,
-    hours: '3,400',
-    brand: 'Volvo',
-    category: 'Dumpers',
-    status: 'Available',
-    condition: 'Refurbished',
-    location: 'Kempton Park, Gauteng',
-    image: IMG.vol_dump,
-    description: 'Fully refurbished with new hinge pins, fresh differential service, and body liner replaced. 42-tonne payload with all-wheel drive and cross-differential lock. On-Board Weighing system calibrated.',
-    specs: { 'Payload': '42 tonnes', 'Engine Power': '336 kW (450 hp)', 'Body Capacity': '27 m³', 'Drive': 'A6×6 All-Wheel' },
   },
 
   // ── TLB (TRACTOR LOADER BACKHOE) ─────────────────────────────────────────────
@@ -244,22 +192,6 @@ export const plantEquipment = [
     image: IMG.fork_1,
     description: 'Industry-standard 3-tonne diesel counterbalance forklift. SAS (System of Active Stability) for outstanding safety. Triple-stage mast with full free-lift. Recently serviced with new brake pads and tyres.',
     specs: { 'Lift Capacity': '3,000 kg', 'Lift Height': '4,500 mm', 'Engine': 'Toyota 4Y Petrol/Diesel', 'Mast': 'Triple Stage FFL' },
-  },
-
-  // ── SKIDSTEERS ───────────────────────────────────────────────────────────────
-  {
-    id: 33,
-    name: 'Caterpillar 262D3 Skid Steer Loader',
-    year: 2021,
-    hours: '1,200',
-    brand: 'Caterpillar',
-    category: 'Skidsteers',
-    status: 'Available',
-    condition: 'Used',
-    location: 'Kempton Park, Gauteng',
-    image: IMG.skid_1,
-    description: 'Compact and powerful skid steer for confined-space earthworks, loading, and demolition. Advanced machine display with fuel economy mode. Rides on 10×16.5 NHS tyres with good remaining life.',
-    specs: { 'Engine Power': '68 kW (91 hp)', 'Operating Weight': '3,700 kg', 'Rated Capacity': '1,089 kg', 'Bucket Capacity': '0.43 m³' },
   },
 
   // ── CRUSHING & SCREENING ─────────────────────────────────────────────────────
@@ -309,12 +241,10 @@ export const brands = [
 export const equipmentCategories = [
   'All',
   'Excavators',
-  'Dumpers',
   'TLB',
   'FEL',
   'Dozers',
   'Forklifts',
-  'Skidsteers',
   'Crushing & Screening',
   'Attachments',
 ];

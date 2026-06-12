@@ -12,11 +12,11 @@ const articles = [
     image: 'https://images.unsplash.com/photo-1606811883055-0d24f05c8bcd?w=600&h=400&fit=crop',
   },
   {
-    title: 'Fresh Stock: Komatsu D65PX-18 Dozer',
+    title: 'Fresh Stock: Shantui SD32 & Komatsu D375A Dozers',
     date: 'April 2026',
     category: 'New Arrivals',
-    excerpt: 'Fully refurbished Komatsu D65PX-18 dozer now available — new track shoes, rollers and idlers, iMC-ready for GPS dozing. Contact us for specifications and pricing.',
-    image: 'https://images.unsplash.com/photo-1621922688758-359fc864071e?w=600&h=400&fit=crop',
+    excerpt: 'Two strong crawler dozers now in stock — a refurbished 320 hp Shantui SD32 and a heavy-production Komatsu D375A mining dozer, both ripper-equipped. Contact us for specifications and pricing.',
+    image: '/images/shantui-sd32.jpg',
   },
   {
     title: 'BMH Trading International Expands African Operations',

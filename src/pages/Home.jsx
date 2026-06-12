@@ -6,8 +6,8 @@ import { ArrowRight, Shield, Globe, Wrench, Truck, Phone, ArrowUpRight } from 'l
 import SectionHeading from '../components/SectionHeading';
 import { plantEquipment, brands } from '../data/equipment';
 
-// Curated hero slideshow — excavators, dozer, dumper, skid steer
-const HERO_IDS = [1, 4, 3, 11, 16, 33, 2];
+// Curated hero slideshow — real in-stock machines
+const HERO_IDS = [7, 21, 5, 6, 41, 1, 4];
 const heroImages = HERO_IDS
   .map((id) => plantEquipment.find((item) => item.id === id))
   .filter(Boolean)
