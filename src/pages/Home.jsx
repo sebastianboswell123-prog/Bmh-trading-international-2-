@@ -229,22 +229,22 @@ export default function Home() {
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-400"
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  background: '#6FA3CE',
-                  color: '#0A1E33',
-                  border: '1px solid #6FA3CE',
-                  boxShadow: '0 8px 30px rgba(111,163,206,0.35)',
+                  background: '#0F2A4A',
+                  color: '#E8F0F8',
+                  border: '1px solid rgba(200,216,232,0.35)',
+                  boxShadow: '0 8px 30px rgba(15,42,74,0.5)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#5B91BE';
-                  e.currentTarget.style.borderColor = '#5B91BE';
+                  e.currentTarget.style.background = '#16395F';
+                  e.currentTarget.style.borderColor = 'rgba(200,216,232,0.6)';
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 14px 44px rgba(111,163,206,0.5)';
+                  e.currentTarget.style.boxShadow = '0 14px 44px rgba(15,42,74,0.6)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = '#6FA3CE';
-                  e.currentTarget.style.borderColor = '#6FA3CE';
+                  e.currentTarget.style.background = '#0F2A4A';
+                  e.currentTarget.style.borderColor = 'rgba(200,216,232,0.35)';
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(111,163,206,0.35)';
+                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(15,42,74,0.5)';
                 }}
               >
                 View Stock
