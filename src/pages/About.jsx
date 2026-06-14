@@ -57,7 +57,7 @@ export default function About() {
       <Helmet>
         <title>About BMH Trading International | Used Equipment Dealer Kempton Park, South Africa</title>
         <meta name="description" content="15+ years supplying quality used construction and mining equipment from Kempton Park, Gauteng. Shipping to 30+ countries worldwide." />
-        <link rel="canonical" href="https://www.bmhtradinginternational.com/about" />
+        <link rel="canonical" href="https://www.bmhplant.com/about" />
       </Helmet>
 
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}

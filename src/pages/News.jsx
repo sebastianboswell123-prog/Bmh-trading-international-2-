@@ -36,7 +36,7 @@ export default function News() {
         <meta property="og:title" content="News & Stock Arrivals | BMH Trading International" />
         <meta property="og:description" content="Stay updated with our latest stock arrivals, parts availability and company news from BMH Trading International." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bmhtradinginternational.com/news" />
+        <meta property="og:url" content="https://www.bmhplant.com/news" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1621922688758-359fc864071e?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -45,7 +45,7 @@ export default function News() {
         <meta name="twitter:title" content="News & Stock Arrivals | BMH Trading International" />
         <meta name="twitter:description" content="Stay updated with our latest stock arrivals, parts availability and company news from BMH Trading International." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1621922688758-359fc864071e?w=1200&h=630&fit=crop&q=80" />
-        <link rel="canonical" href="https://www.bmhtradinginternational.com/news" />
+        <link rel="canonical" href="https://www.bmhplant.com/news" />
       </Helmet>
       <section
         className="relative py-28 lg:py-36"

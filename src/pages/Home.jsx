@@ -64,7 +64,7 @@ export default function Home() {
         <meta property="og:title" content="Used Construction & Mining Equipment South Africa | BMH Trading International" />
         <meta property="og:description" content="Quality used excavators, loaders, dozers, cranes & forklifts for sale. Based in Kempton Park, SA. Shipping to 30+ countries." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bmhtradinginternational.com/" />
+        <meta property="og:url" content="https://www.bmhplant.com/" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -73,14 +73,14 @@ export default function Home() {
         <meta name="twitter:title" content="Used Construction & Mining Equipment South Africa | BMH Trading International" />
         <meta name="twitter:description" content="Quality used excavators, loaders, dozers, cranes & forklifts for sale. Based in Kempton Park, SA. Shipping to 30+ countries." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
-        <link rel="canonical" href="https://www.bmhtradinginternational.com/" />
+        <link rel="canonical" href="https://www.bmhplant.com/" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "BMH Trading International",
             "description": "Suppliers of quality used construction and mining equipment. Based in Kempton Park, South Africa. Shipping worldwide.",
-            "url": "https://www.bmhtradinginternational.com",
+            "url": "https://www.bmhplant.com",
             "email": "bradleyh@bmhtradinginternational.com",
             "address": {
               "@type": "PostalAddress",

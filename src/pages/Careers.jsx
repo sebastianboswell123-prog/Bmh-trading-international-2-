@@ -36,7 +36,7 @@ export default function Careers() {
         <meta property="og:title" content="Careers at BMH Trading International | Kempton Park, Gauteng" />
         <meta property="og:description" content="Open positions in heavy equipment sales, diesel mechanics & parts. Based in Kempton Park, South Africa." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bmhtradinginternational.com/careers" />
+        <meta property="og:url" content="https://www.bmhplant.com/careers" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1690719465490-db2864ef85c1?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -45,7 +45,7 @@ export default function Careers() {
         <meta name="twitter:title" content="Careers at BMH Trading International | Kempton Park, Gauteng" />
         <meta name="twitter:description" content="Open positions in heavy equipment sales, diesel mechanics & parts. Based in Kempton Park, South Africa." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1690719465490-db2864ef85c1?w=1200&h=630&fit=crop&q=80" />
-        <link rel="canonical" href="https://www.bmhtradinginternational.com/careers" />
+        <link rel="canonical" href="https://www.bmhplant.com/careers" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
@@ -61,8 +61,8 @@ export default function Careers() {
               "hiringOrganization": {
                 "@type": "Organization",
                 "name": "BMH Trading International",
-                "sameAs": "https://www.bmhtradinginternational.com",
-                "logo": "https://www.bmhtradinginternational.com/bmh-logo-hd.png"
+                "sameAs": "https://www.bmhplant.com",
+                "logo": "https://www.bmhplant.com/bmh-logo-hd.png"
               },
               "jobLocation": {
                 "@type": "Place",

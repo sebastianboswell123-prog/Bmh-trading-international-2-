@@ -24,7 +24,7 @@ export default function Plant() {
         <meta property="og:title" content="Used Heavy Machinery For Sale South Africa | BMH Trading International" />
         <meta property="og:description" content="28+ used excavators, wheel loaders, bulldozers, cranes & more. Leading brands. Based in Kempton Park, SA." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bmhtradinginternational.com/plant" />
+        <meta property="og:url" content="https://www.bmhplant.com/plant" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -33,13 +33,13 @@ export default function Plant() {
         <meta name="twitter:title" content="Used Heavy Machinery For Sale South Africa | BMH Trading International" />
         <meta name="twitter:description" content="28+ used excavators, wheel loaders, bulldozers, cranes & more. Leading brands. Based in Kempton Park, SA." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
-        <link rel="canonical" href="https://www.bmhtradinginternational.com/plant" />
+        <link rel="canonical" href="https://www.bmhplant.com/plant" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ItemList",
           "name": "Used Heavy Machinery For Sale — BMH Trading International",
           "description": "Quality used construction, mining and agricultural equipment for sale in South Africa.",
-          "url": "https://www.bmhtradinginternational.com/plant",
+          "url": "https://www.bmhplant.com/plant",
           "numberOfItems": plantEquipment.length,
           "itemListElement": plantEquipment.map((item, i) => ({
             "@type": "ListItem",
@@ -55,7 +55,7 @@ export default function Plant() {
                 "availability": "https://schema.org/InStock",
                 "priceCurrency": "ZAR",
                 "seller": { "@type": "Organization", "name": "BMH Trading International" },
-                "url": "https://www.bmhtradinginternational.com/plant"
+                "url": "https://www.bmhplant.com/plant"
               },
               "additionalProperty": [
                 { "@type": "PropertyValue", "name": "Year", "value": String(item.year) },

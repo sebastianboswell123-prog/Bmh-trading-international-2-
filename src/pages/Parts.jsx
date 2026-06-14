@@ -88,7 +88,7 @@ export default function Parts() {
         <meta property="og:title" content="Heavy Equipment Parts South Africa | BMH Trading International" />
         <meta property="og:description" content="Genuine & aftermarket parts for leading brands. Fast delivery across South Africa. Enquire now." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.bmhtradinginternational.com/parts" />
+        <meta property="og:url" content="https://www.bmhplant.com/parts" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1606811883055-0d24f05c8bcd?w=1200&h=630&fit=crop&q=80" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -97,7 +97,7 @@ export default function Parts() {
         <meta name="twitter:title" content="Genuine & Aftermarket Parts South Africa | BMH Trading International" />
         <meta name="twitter:description" content="OEM and aftermarket spare parts for Caterpillar, Komatsu, Volvo, Hitachi & more. Fast delivery across Africa." />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1606811883055-0d24f05c8bcd?w=1200&h=630&fit=crop&q=80" />
-        <link rel="canonical" href="https://www.bmhtradinginternational.com/parts" />
+        <link rel="canonical" href="https://www.bmhplant.com/parts" />
       </Helmet>
 
       {/* Hero */}
