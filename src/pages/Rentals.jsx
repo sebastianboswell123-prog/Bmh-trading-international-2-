@@ -112,14 +112,14 @@ export default function Rentals() {
         <meta property="og:description" content="Excavators, wheel loaders & dozers for hire in South Africa. Short & long-term rental options available." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bmhplant.com/rentals" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
+        <meta property="og:image" content="https://www.bmhplant.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Construction equipment for hire South Africa — BMH Trading International" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Construction Equipment Rental South Africa | BMH Trading International" />
         <meta name="twitter:description" content="Excavators, wheel loaders & dozers for hire in South Africa. Short & long-term rental options available." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
+        <meta name="twitter:image" content="https://www.bmhplant.com/og-image.jpg" />
         <link rel="canonical" href="https://www.bmhplant.com/rentals" />
       </Helmet>
 

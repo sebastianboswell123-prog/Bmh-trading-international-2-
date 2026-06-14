@@ -40,14 +40,14 @@ export default function Contact() {
         <meta property="og:description" content="Reach our team in Kempton Park, Gauteng. WhatsApp available. Equipment enquiries answered within 24 hours." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bmhplant.com/contact" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
+        <meta property="og:image" content="https://www.bmhplant.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Contact BMH Trading International — Kempton Park, South Africa" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact BMH Trading International | Kempton Park, South Africa" />
         <meta name="twitter:description" content="Reach our team in Kempton Park, Gauteng. WhatsApp available. Equipment enquiries answered within 24 hours." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
+        <meta name="twitter:image" content="https://www.bmhplant.com/og-image.jpg" />
         <link rel="canonical" href="https://www.bmhplant.com/contact" />
       </Helmet>
       <section

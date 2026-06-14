@@ -25,14 +25,14 @@ export default function Plant() {
         <meta property="og:description" content="28+ used excavators, wheel loaders, bulldozers, cranes & more. Leading brands. Based in Kempton Park, SA." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.bmhplant.com/plant" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
+        <meta property="og:image" content="https://www.bmhplant.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Used heavy machinery for sale — BMH Trading International South Africa" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Used Heavy Machinery For Sale South Africa | BMH Trading International" />
         <meta name="twitter:description" content="28+ used excavators, wheel loaders, bulldozers, cranes & more. Leading brands. Based in Kempton Park, SA." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?w=1200&h=630&fit=crop&q=80" />
+        <meta name="twitter:image" content="https://www.bmhplant.com/og-image.jpg" />
         <link rel="canonical" href="https://www.bmhplant.com/plant" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
