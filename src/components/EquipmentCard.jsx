@@ -6,6 +6,12 @@ export default function EquipmentCard({ item, index = 0 }) {
     ? { bg: 'rgba(37,211,102,0.15)', border: 'rgba(37,211,102,0.3)', text: '#6ee7a0' }
     : { bg: 'rgba(15,42,74,0.7)', border: 'rgba(200,216,232,0.1)', text: 'var(--chrome)' };
 
+  // Hide the "Used" tag — hours already convey condition. Keep positive tags (Refurbished/New).
+  const showCondition = item.condition && item.condition !== 'Used';
+  // Show year only when it's a real value, and fold it into the machine name.
+  const hasYear = item.year && String(item.year).toLowerCase() !== 'n/a';
+  const title = hasYear ? `${item.year} ${item.name}` : item.name;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -22,7 +28,7 @@ export default function EquipmentCard({ item, index = 0 }) {
       <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
         <img
           src={item.image}
-          alt={`${item.year} ${item.name} for sale in South Africa — BMH Trading International`}
+          alt={`${title} for sale in South Africa — BMH Trading International`}
           loading="lazy"
           className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.06]"
         />
@@ -33,30 +39,20 @@ export default function EquipmentCard({ item, index = 0 }) {
             background: 'linear-gradient(180deg, rgba(15,42,74,0.1) 0%, transparent 30%, transparent 50%, rgba(15,42,74,0.8) 100%)',
           }}
         />
-        {/* Condition badge */}
-        <div
-          className="absolute top-4 left-4 px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase backdrop-blur-sm"
-          style={{
-            fontFamily: 'var(--font-heading)',
-            background: conditionColor.bg,
-            color: conditionColor.text,
-            border: `1px solid ${conditionColor.border}`,
-          }}
-        >
-          {item.condition}
-        </div>
-        {/* Year badge */}
-        <div
-          className="absolute top-4 right-4 px-2.5 py-1 text-[12px] font-semibold tracking-wider backdrop-blur-sm"
-          style={{
-            fontFamily: 'var(--font-heading)',
-            background: 'rgba(15,42,74,0.6)',
-            color: 'var(--chrome-light)',
-            border: '1px solid rgba(200,216,232,0.08)',
-          }}
-        >
-          {item.year}
-        </div>
+        {/* Condition badge — only for positive tags (Refurbished / New) */}
+        {showCondition && (
+          <div
+            className="absolute top-4 left-4 px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase backdrop-blur-sm"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              background: conditionColor.bg,
+              color: conditionColor.text,
+              border: `1px solid ${conditionColor.border}`,
+            }}
+          >
+            {item.condition}
+          </div>
+        )}
         {/* Hover reveal arrow */}
         <div
           className="absolute bottom-4 right-4 w-9 h-9 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-2 group-hover:translate-y-0"
@@ -81,7 +77,7 @@ export default function EquipmentCard({ item, index = 0 }) {
           className="text-[15px] font-semibold tracking-wide uppercase leading-tight mb-3"
           style={{ fontFamily: 'var(--font-heading)', color: 'var(--chrome-light)' }}
         >
-          {item.name}
+          {title}
         </h3>
 
         {/* Meta row */}
@@ -123,7 +119,7 @@ export default function EquipmentCard({ item, index = 0 }) {
         {/* Enquire link */}
         <div className="mt-4 pt-4" style={{ borderTop: '1px solid rgba(200,216,232,0.06)' }}>
           <a
-            href={`https://wa.me/27827800084?text=${encodeURIComponent(`Hi, I'm interested in the ${item.year} ${item.name}. Is it still available?`)}`}
+            href={`https://wa.me/27827800084?text=${encodeURIComponent(`Hi, I'm interested in the ${title}. Is it still available?`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-2.5 text-[12px] font-semibold tracking-[0.2em] uppercase transition-all duration-300"
