@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet-async';
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Wrench, Send, CheckCircle } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
-import { EMAILJS_CONFIG } from '../utils/emailService';
+
+const WHATSAPP_NUMBER = '27827800084';
 
 const brands = [
   'Caterpillar', 'Komatsu', 'Volvo', 'Hitachi', 'Liebherr',
@@ -21,30 +21,29 @@ const supportedBrands = [
 ];
 
 export default function Parts() {
-  const formRef = useRef();
   const [form, setForm] = useState({
     name: '', email: '', phone: '', brand: '', model: '', part_number: '', message: '',
   });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle'); // idle | success
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.brand || !form.part_number) return;
-    setStatus('sending');
-    try {
-      await emailjs.sendForm(
-        EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_PARTS,
-        formRef.current,
-        EMAILJS_CONFIG.PUBLIC_KEY
-      );
-      setStatus('success');
-      setForm({ name: '', email: '', phone: '', brand: '', model: '', part_number: '', message: '' });
-    } catch {
-      setStatus('error');
-    }
+    if (!form.name || !form.brand || !form.part_number) return;
+    const text = [
+      'Parts enquiry from the BMH website:',
+      `Name: ${form.name}`,
+      form.email ? `Email: ${form.email}` : null,
+      form.phone ? `Phone: ${form.phone}` : null,
+      `Brand: ${form.brand}`,
+      form.model ? `Model: ${form.model}` : null,
+      `Part needed: ${form.part_number}`,
+      form.message ? `Notes: ${form.message}` : null,
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+    setStatus('success');
+    setForm({ name: '', email: '', phone: '', brand: '', model: '', part_number: '', message: '' });
   };
 
   const inputStyle = {
@@ -238,8 +237,8 @@ export default function Parts() {
                   className="py-10 text-center"
                 >
                   <CheckCircle size={36} strokeWidth={1} className="mx-auto mb-4" style={{ color: '#6ee7a0' }} />
-                  <p className="text-[15px] font-light mb-1" style={{ color: 'var(--chrome-light)' }}>Enquiry Received</p>
-                  <p className="text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>We'll get back to you within 24 hours.</p>
+                  <p className="text-[15px] font-light mb-1" style={{ color: 'var(--chrome-light)' }}>Opening WhatsApp…</p>
+                  <p className="text-[15px] font-light" style={{ color: 'var(--text-muted)' }}>Your enquiry is pre-filled — just press send. If WhatsApp didn't open, message us on +27&nbsp;82&nbsp;780&nbsp;0084.</p>
                   <button
                     className="mt-6 text-[12px] tracking-[0.2em] uppercase font-medium transition-colors duration-300"
                     style={{ fontFamily: 'var(--font-heading)', color: 'var(--text-dim)' }}
@@ -251,9 +250,7 @@ export default function Parts() {
                   </button>
                 </motion.div>
               ) : (
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                  <input type="hidden" name="to_email" value={EMAILJS_CONFIG.TO_EMAIL} />
-
+                <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Contact details */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <input
@@ -262,8 +259,8 @@ export default function Parts() {
                       style={inputStyle} onFocus={focusIn} onBlur={focusOut}
                     />
                     <input
-                      type="email" name="email" placeholder="Email Address *"
-                      value={form.email} onChange={handleChange} required
+                      type="email" name="email" placeholder="Email Address"
+                      value={form.email} onChange={handleChange}
                       style={inputStyle} onFocus={focusIn} onBlur={focusOut}
                     />
                   </div>
@@ -313,35 +310,25 @@ export default function Parts() {
                   <div className="flex items-center gap-4 flex-wrap">
                     <button
                       type="submit"
-                      disabled={status === 'sending'}
-                      className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 text-[13px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 cursor-pointer"
                       style={{
                         fontFamily: 'var(--font-heading)',
-                        background: 'rgba(200,216,232,0.08)',
-                        color: 'var(--chrome-light)',
-                        border: '1px solid rgba(200,216,232,0.2)',
+                        background: 'linear-gradient(135deg, #25D366 0%, #1da851 100%)',
+                        color: '#fff',
+                        boxShadow: '0 4px 16px rgba(37,211,102,0.2)',
                       }}
                       onMouseEnter={(e) => {
-                        if (status !== 'sending') {
-                          e.currentTarget.style.background = 'rgba(200,216,232,0.14)';
-                          e.currentTarget.style.borderColor = 'rgba(200,216,232,0.35)';
-                          e.currentTarget.style.transform = 'translateY(-2px)';
-                        }
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 12px 28px rgba(37,211,102,0.3)';
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = 'rgba(200,216,232,0.08)';
-                        e.currentTarget.style.borderColor = 'rgba(200,216,232,0.2)';
                         e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = '0 4px 16px rgba(37,211,102,0.2)';
                       }}
                     >
                       <Send size={13} strokeWidth={1.5} />
-                      {status === 'sending' ? 'Sending…' : 'Submit Enquiry'}
+                      Send via WhatsApp
                     </button>
-                    {status === 'error' && (
-                      <p className="text-[14px]" style={{ color: '#f87171' }}>
-                        Failed to send. Please try WhatsApp or email directly.
-                      </p>
-                    )}
                   </div>
                 </form>
               )}
