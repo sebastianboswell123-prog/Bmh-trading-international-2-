@@ -1,16 +1,55 @@
-# React + Vite
+# BMH Trading International
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing + stock website for BMH Trading International. React (Vite) front-end, content managed in Sanity, deployed on Vercel.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Front-end:** React 19 + Vite, React Router, Tailwind, Framer Motion
+- **CMS:** Sanity (hosted Studio) — stock/equipment is editable by the client
+- **Hosting:** Vercel (auto-deploys from `main`)
 
-## React Compiler
+## Local development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build to dist/
+```
 
-## Expanding the ESLint configuration
+## Content management (Sanity)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The client manages all machines/stock here — no code or deploy needed:
+
+- **Dashboard:** https://bmh-trading.sanity.studio/
+- **Project ID:** `k5kbfta8`  •  **Dataset:** `production`
+- **Manage / members / tokens:** https://www.sanity.io/manage/project/k5kbfta8
+
+Content edits go live on the site within seconds (served via Sanity's CDN).
+The website reads stock through `src/sanity/` (`client.js`, `image.js`, `equipment.js`).
+
+Project ID and dataset are public, publishable values. `src/sanity/client.js`
+falls back to them, so the app works with or without the `VITE_SANITY_*` env vars.
+
+### One-time data migration
+
+`scripts/migrate-to-sanity.mjs` seeded the initial 13 machines. It is not needed
+for normal operation. To re-run:
+
+```bash
+SANITY_WRITE_TOKEN=xxx node scripts/migrate-to-sanity.mjs
+```
+
+## Deployment (Vercel)
+
+- Framework preset: Vite. Build: `npm run build`, output: `dist/` (see `vercel.json`).
+- `vercel.json` adds an SPA rewrite so deep links (e.g. `/plant`) work on refresh.
+- Optional env vars (Project Settings → Environment Variables):
+  `VITE_SANITY_PROJECT_ID=k5kbfta8`, `VITE_SANITY_DATASET=production`.
+
+## Outstanding production setup (needs account access)
+
+- **Custom domain:** connect `bmhtradinginternational.com` in Vercel + point DNS at
+  the registrar. CORS for the domain is already allowed in Sanity.
+- **Contact form email:** `src/utils/emailService.js` still has EmailJS placeholders.
+  Add the EmailJS Service/Template/Public keys for the contact form to send.
+  (The per-machine "Enquire" buttons already work — they open WhatsApp.)
