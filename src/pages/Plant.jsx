@@ -3,10 +3,17 @@ import { useState } from 'react';
 import SectionHeading from '../components/SectionHeading';
 import EquipmentCard from '../components/EquipmentCard';
 import FilterBar from '../components/FilterBar';
-import { plantEquipment, equipmentCategories } from '../data/equipment';
+import { equipmentCategories as CATEGORY_ORDER } from '../data/equipment';
+import { useEquipment } from '../sanity/equipment';
 
 export default function Plant() {
   const [active, setActive] = useState('All');
+  const { equipment: plantEquipment, loading } = useEquipment();
+
+  // Show only categories that actually have stock, in the preferred order.
+  const present = new Set(plantEquipment.map((e) => e.category));
+  const equipmentCategories = ['All', ...CATEGORY_ORDER.filter((c) => c !== 'All' && present.has(c))];
+
   const filtered = active === 'All' ? plantEquipment : plantEquipment.filter((e) => e.category === active);
 
   return (
@@ -80,7 +87,13 @@ export default function Plant() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
           <FilterBar categories={equipmentCategories} active={active} onSelect={setActive} />
 
-          {filtered.length === 0 ? (
+          {loading ? (
+            <div className="py-20 text-center">
+              <p className="text-base font-light" style={{ color: 'var(--text-dim)' }}>
+                Loading stock…
+              </p>
+            </div>
+          ) : filtered.length === 0 ? (
             <div className="py-20 text-center">
               <p className="text-base font-light" style={{ color: 'var(--text-dim)' }}>
                 No equipment found in this category. Contact us for specific requirements.

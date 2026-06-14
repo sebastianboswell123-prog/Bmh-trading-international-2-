@@ -4,14 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Globe, Wrench, Truck, Phone, ArrowUpRight } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
-import { plantEquipment, brands } from '../data/equipment';
-
-// Curated hero slideshow — real in-stock machines
-const HERO_IDS = [7, 21, 5, 6, 41, 1, 4];
-const heroImages = HERO_IDS
-  .map((id) => plantEquipment.find((item) => item.id === id))
-  .filter(Boolean)
-  .map((item) => item.image.replace('w=900', 'w=1800').replace('q=80', 'q=85'));
+import { brands } from '../data/equipment';
+import { useEquipment } from '../sanity/equipment';
 
 const stats = [
   { value: '15+', label: 'Years Experience' },
@@ -47,11 +41,20 @@ const services = [
 
 export default function Home() {
   const [heroIdx, setHeroIdx] = useState(0);
+  const { equipment } = useEquipment();
+
+  // Hero slideshow: machines flagged "featured" in the dashboard (fallback: all stock).
+  const heroItems = equipment.filter((e) => e.featured);
+  const slides = (heroItems.length ? heroItems : equipment).filter((e) => e.imageLarge);
+  const heroImages = slides.map((e) => e.imageLarge);
 
   useEffect(() => {
+    if (heroImages.length <= 1) return undefined;
     const t = setInterval(() => setHeroIdx((i) => (i + 1) % heroImages.length), 3500);
     return () => clearInterval(t);
-  }, []);
+  }, [heroImages.length]);
+
+  const safeIdx = heroImages.length ? heroIdx % heroImages.length : 0;
 
   return (
     <>
@@ -116,18 +119,20 @@ export default function Home() {
       <section className="relative min-h-[78vh] lg:min-h-[82vh] flex items-center overflow-hidden">
         {/* Background layers */}
         <div className="absolute inset-0">
-          {/* Hero background slideshow — cycles through all stock */}
+          {/* Hero background slideshow — featured stock from the dashboard */}
           <AnimatePresence>
-            <motion.img
-              key={heroIdx}
-              src={heroImages[heroIdx]}
-              alt={plantEquipment[heroIdx].name}
-              className="absolute inset-0 w-full h-full object-contain object-center lg:object-cover"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.8, ease: 'easeInOut' }}
-            />
+            {heroImages.length > 0 && (
+              <motion.img
+                key={safeIdx}
+                src={heroImages[safeIdx]}
+                alt={slides[safeIdx]?.name || 'BMH Trading International heavy equipment'}
+                className="absolute inset-0 w-full h-full object-contain object-center lg:object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.8, ease: 'easeInOut' }}
+              />
+            )}
           </AnimatePresence>
           {/* Dark cinematic overlay */}
           <div
