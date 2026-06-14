@@ -5,7 +5,7 @@ import { urlFor } from './image';
 // Sold items are hidden from the public site; ordered by the client's displayOrder.
 const EQUIPMENT_QUERY = `*[_type == "equipment" && status != "Sold"]
   | order(displayOrder asc, _createdAt asc){
-    _id, name, brand, category, condition, year, hours, location, status,
+    _id, name, brand, category, year, hours, location, status,
     description, featured,
     "specs": specs[]{label, value},
     image
@@ -31,7 +31,6 @@ function mapDoc(doc) {
     name: doc.name,
     brand: doc.brand,
     category: doc.category,
-    condition: doc.condition,
     year: doc.year || 'N/A',
     hours: doc.hours || 'N/A',
     location: doc.location,

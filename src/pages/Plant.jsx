@@ -60,7 +60,6 @@ export default function Plant() {
               "additionalProperty": [
                 { "@type": "PropertyValue", "name": "Year", "value": String(item.year) },
                 { "@type": "PropertyValue", "name": "Operating Hours", "value": item.hours },
-                { "@type": "PropertyValue", "name": "Condition", "value": item.condition },
                 { "@type": "PropertyValue", "name": "Location", "value": item.location }
               ]
             }

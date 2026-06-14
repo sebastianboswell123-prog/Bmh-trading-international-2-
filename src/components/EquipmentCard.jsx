@@ -2,12 +2,6 @@ import { motion } from 'framer-motion';
 import { Clock, Tag, ArrowUpRight, MapPin } from 'lucide-react';
 
 export default function EquipmentCard({ item, index = 0 }) {
-  const conditionColor = item.condition === 'Refurbished'
-    ? { bg: 'rgba(37,211,102,0.15)', border: 'rgba(37,211,102,0.3)', text: '#6ee7a0' }
-    : { bg: 'rgba(15,42,74,0.7)', border: 'rgba(200,216,232,0.1)', text: 'var(--chrome)' };
-
-  // Hide the "Used" tag — hours already convey condition. Keep positive tags (Refurbished/New).
-  const showCondition = item.condition && item.condition !== 'Used';
   // Show year only when it's a real value, and fold it into the machine name.
   const hasYear = item.year && String(item.year).toLowerCase() !== 'n/a';
   const title = hasYear ? `${item.year} ${item.name}` : item.name;
@@ -39,20 +33,6 @@ export default function EquipmentCard({ item, index = 0 }) {
             background: 'linear-gradient(180deg, rgba(15,42,74,0.1) 0%, transparent 30%, transparent 50%, rgba(15,42,74,0.8) 100%)',
           }}
         />
-        {/* Condition badge — only for positive tags (Refurbished / New) */}
-        {showCondition && (
-          <div
-            className="absolute top-4 left-4 px-3 py-1 text-[9px] font-semibold tracking-[0.25em] uppercase backdrop-blur-sm"
-            style={{
-              fontFamily: 'var(--font-heading)',
-              background: conditionColor.bg,
-              color: conditionColor.text,
-              border: `1px solid ${conditionColor.border}`,
-            }}
-          >
-            {item.condition}
-          </div>
-        )}
         {/* Hover reveal arrow */}
         <div
           className="absolute bottom-4 right-4 w-9 h-9 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-2 group-hover:translate-y-0"
