@@ -8,7 +8,8 @@ const EQUIPMENT_QUERY = `*[_type == "equipment" && status != "Sold"]
     _id, name, brand, category, year, hours, location, status,
     description, featured,
     "specs": specs[]{label, value},
-    image
+    image,
+    gallery
   }`;
 
 // Map a Sanity document to the shape the existing components expect.
@@ -18,13 +19,20 @@ function mapDoc(doc) {
     if (s?.label) specs[s.label] = s.value;
   });
 
-  const hasImage = !!doc.image?.asset;
+  // Main photo first, then any gallery photos — skip blanks.
+  const allImages = [doc.image, ...(doc.gallery || [])].filter((img) => img?.asset);
+
+  const hasImage = allImages.length > 0;
   const image = hasImage
-    ? urlFor(doc.image).width(900).height(675).fit('crop').auto('format').url()
+    ? urlFor(allImages[0]).width(900).height(675).fit('crop').auto('format').url()
     : '';
   const imageLarge = hasImage
-    ? urlFor(doc.image).width(1800).height(1100).fit('crop').auto('format').url()
+    ? urlFor(allImages[0]).width(1800).height(1100).fit('crop').auto('format').url()
     : '';
+  // Full-size, aspect-preserved versions for the photo viewer (main + gallery).
+  const photos = allImages.map((img) =>
+    urlFor(img).width(1600).fit('max').auto('format').url()
+  );
 
   return {
     id: doc._id,
@@ -40,6 +48,7 @@ function mapDoc(doc) {
     specs,
     image,
     imageLarge,
+    photos,
   };
 }
 

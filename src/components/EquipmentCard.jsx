@@ -1,10 +1,20 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Tag, ArrowUpRight, MapPin } from 'lucide-react';
+import { Clock, Tag, ArrowUpRight, MapPin, Images } from 'lucide-react';
+import Lightbox from './Lightbox';
 
 export default function EquipmentCard({ item, index = 0 }) {
   // Show year only when it's a real value, and fold it into the machine name.
   const hasYear = item.year && String(item.year).toLowerCase() !== 'n/a';
   const title = hasYear ? `${item.year} ${item.name}` : item.name;
+
+  // Photo gallery (main + extra photos from Sanity); fall back to the card image.
+  const photos = item.photos && item.photos.length ? item.photos : [item.image].filter(Boolean);
+  const [lightbox, setLightbox] = useState({ open: false, index: 0 });
+  const openLightbox = (e) => {
+    e.stopPropagation();
+    if (photos.length) setLightbox({ open: true, index: 0 });
+  };
 
   return (
     <motion.div
@@ -19,7 +29,11 @@ export default function EquipmentCard({ item, index = 0 }) {
       }}
     >
       {/* Image */}
-      <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
+      <div
+        className="relative overflow-hidden cursor-zoom-in"
+        style={{ aspectRatio: '4/3' }}
+        onClick={openLightbox}
+      >
         <img
           src={item.image}
           alt={`${title} for sale in South Africa — BMH Trading International`}
@@ -33,6 +47,16 @@ export default function EquipmentCard({ item, index = 0 }) {
             background: 'linear-gradient(180deg, rgba(15,42,74,0.1) 0%, transparent 30%, transparent 50%, rgba(15,42,74,0.8) 100%)',
           }}
         />
+        {/* Photo count badge (only when there are extra photos) */}
+        {photos.length > 1 && (
+          <div
+            className="absolute top-4 left-4 flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm"
+            style={{ background: 'rgba(15,42,74,0.7)', border: '1px solid rgba(200,216,232,0.15)', color: 'var(--chrome-light)' }}
+          >
+            <Images size={12} strokeWidth={1.5} />
+            {photos.length}
+          </div>
+        )}
         {/* Hover reveal arrow */}
         <div
           className="absolute bottom-4 right-4 w-9 h-9 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-2 group-hover:translate-y-0"
@@ -41,6 +65,16 @@ export default function EquipmentCard({ item, index = 0 }) {
           <ArrowUpRight size={15} strokeWidth={1.5} />
         </div>
       </div>
+
+      {lightbox.open && (
+        <Lightbox
+          photos={photos}
+          index={lightbox.index}
+          title={title}
+          onClose={() => setLightbox({ open: false, index: 0 })}
+          onIndexChange={(i) => setLightbox((s) => ({ ...s, index: i }))}
+        />
+      )}
 
       {/* Content */}
       <div className="p-5">
