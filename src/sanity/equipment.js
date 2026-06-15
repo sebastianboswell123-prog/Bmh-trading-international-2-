@@ -3,7 +3,7 @@ import { client } from './client';
 import { urlFor } from './image';
 
 // Sold items are hidden from the public site; ordered by the client's displayOrder.
-const EQUIPMENT_QUERY = `*[_type == "equipment" && status != "Sold"]
+const EQUIPMENT_QUERY = `*[_type == "equipment" && status != "Sold" && status != "Coming Soon"]
   | order(displayOrder asc, _createdAt asc){
     _id, name, brand, category, year, hours, location, status,
     description, featured,
