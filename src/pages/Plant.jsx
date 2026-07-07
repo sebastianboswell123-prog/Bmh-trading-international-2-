@@ -10,9 +10,12 @@ export default function Plant() {
   const [active, setActive] = useState('All');
   const { equipment: plantEquipment, loading } = useEquipment();
 
-  // Show only categories that actually have stock, in the preferred order.
-  const present = new Set(plantEquipment.map((e) => e.category));
-  const equipmentCategories = ['All', ...CATEGORY_ORDER.filter((c) => c !== 'All' && present.has(c))];
+  // Show the full range of categories BMH deals in (even those with no current
+  // stock), so buyers can see everything we source. Any category on a live
+  // machine that isn't in the master list is appended so nothing is hidden.
+  const present = plantEquipment.map((e) => e.category).filter(Boolean);
+  const extras = present.filter((c) => !CATEGORY_ORDER.includes(c));
+  const equipmentCategories = [...CATEGORY_ORDER, ...new Set(extras)];
 
   const filtered = active === 'All' ? plantEquipment : plantEquipment.filter((e) => e.category === active);
 

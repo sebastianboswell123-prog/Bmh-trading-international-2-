@@ -238,13 +238,20 @@ export const brands = [
   'Sany', 'Shantui', 'Metso', 'John Deere', 'Toyota',
 ];
 
+// Full range of categories BMH deals in — kept in sync with the Sanity
+// dashboard's category options. Shown as filters even when a category has no
+// current stock, so buyers can see the complete range we source.
 export const equipmentCategories = [
   'All',
   'Excavators',
+  'Dumpers',
   'TLB',
   'FEL',
   'Dozers',
   'Forklifts',
+  'Mobile Cranes',
+  'Skidsteers',
+  'Telescopic Handlers',
   'Crushing & Screening',
   'Attachments',
 ];
